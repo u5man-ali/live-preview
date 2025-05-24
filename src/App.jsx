@@ -10,7 +10,7 @@ function App() {
       
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Button with both icons</h2>
-        <div className="flex gap-4 flex-wrap">
+        <div>
           {/*Show both icons */}
           <Button
             size="md"
