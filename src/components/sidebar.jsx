@@ -1,9 +1,7 @@
 // src/components/sidebar.jsx
 import { useState } from "react";
 import Button from './button';
-import IconLeft from '../icons/Placeholder-Outline.svg?react'
-import IconRight from '../icons/Arrow-Enter-Left-Outline.svg?react'
-
+                                                              
 const sections = [
   { id: "overview", label: "Overview", showRightIcon: true, iconRightName: "Chevron-Down-Outline" },
   { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Placeholder-Outline", showRightIcon: true, iconRightName: "Add-Outline" },
