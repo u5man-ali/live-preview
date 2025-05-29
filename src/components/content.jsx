@@ -1,8 +1,12 @@
 // src/components/content.jsx
 import ButtonDemo from './pages/button-demo';
+import Overview from './pages/overview';
+import Accordion from './pages/accordion';
 
 const componentMap = {
   button: ButtonDemo,
+  overview: Overview,
+  accordion: Accordion,
   // Add other components here as needed
 };
 

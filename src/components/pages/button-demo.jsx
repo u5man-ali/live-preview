@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Button from '../button'
-import IconLeft from '../../icons/Placeholder-Outline.svg?react'
-import IconRight from '../../icons/Arrow-Enter-Left-Outline.svg?react'
 
 export default function buttonDemo() {
   return (

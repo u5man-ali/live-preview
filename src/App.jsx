@@ -1,6 +1,5 @@
 import './App.css'
 import React, { useState } from 'react'
-import Button from './components/button'
 import Sidebar from './components/sidebar'
 import Content from './components/content'
 

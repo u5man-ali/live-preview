@@ -20,8 +20,8 @@ export default function Sidebar({ onSelect }) {
   return (
     <aside className="sticky -left-64 bottom-0 top-0 z-1 hidden h-[calc(100vh-4px)] w-60 shrink-0 overflow-y-auto lg:left-0 lg:block border-l border-r
         border-white-500 px-4 py-6 bg-white-300">
-        <h4 className="text-body-md font-semibold mb-4">Getting Started</h4>
-        <nav className="flex flex-col gap-2">
+        <h4 className="text-body-md font-medium mb-4">Getting Started</h4>
+        <nav className="flex flex-col">
         {sections.map((section) => (
           <Button
             size="md"
