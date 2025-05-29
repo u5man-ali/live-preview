@@ -7,7 +7,7 @@ export default function buttonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
-        <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 p-2">DC Button Component</h1>
+        <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">DC Button Component</h1>
         <p className="w-full h-min text-body-md font-normal mb-4">Build powerful CTAs with our Tailwind CSS-powered button component. Designed to be flexible and modern, it includes support for icons, multiple styles like primary, neutral, outline, success, and error, and works seamlessly across different screen sizes.
 Whether you're crafting call-to-actions, form submissions, or navigation triggers, this component adapts to your needs with clean, scalable styling. Explore the examples below to see how easily it integrates into your Tailwind-based UI projects.</p>
         <h3 className="w-full h-min text-body-lg font-semibold">Button</h3>

@@ -3,10 +3,10 @@ import { useState } from "react";
 import Button from './button';
                                                               
 const sections = [
-  { id: "overview", label: "Overview", showRightIcon: true, iconRightName: "Chevron-Down-Outline" },
-  { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Placeholder-Outline", showRightIcon: true, iconRightName: "Add-Outline" },
-  { id: "badge", label: "Badge", iconLeftName: "Add-Outline" },
-  { id: "accordion", label: "Accordion", iconLeftName: "Arrow-Enter-Left-Outline" },
+  { id: "overview", label: "Overview"},
+  { id: "button", label: "Button",  showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
+  { id: "badge", label: "Badge",  showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
+  { id: "accordion", label: "Accordion", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
 ];
 
 export default function Sidebar({ onSelect }) {
