@@ -3,41 +3,25 @@ import Button from '../button'
 export default function buttonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-        <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
+        <div className="w-full flex justify-start items-center gap-4 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">DezineCrafts: Ultimate UI Kit</h1>
-        <p className="w-full h-min text-body-md font-normal mb-4">Tailwind CSS Components Library<br></br>
-
-Welcome to DezineCrafts – the Ultimate UI Kit, a modern, scalable, and fully customizable library of reusable components built with Tailwind CSS.<br></br>
-
-Designed for speed, consistency, and responsiveness, DezineCrafts helps developers and designers rapidly build beautiful interfaces for web applications of any size or complexity.<br></br>
-
-🎯 What You'll Find<br></br>
-
-✅ Pre-built UI components like buttons, badges, modals, and accordions<br></br>
-
-🎨 Multiple styles & variants for each component (e.g., primary, neutral, outline, success)<br></br>
-
-🧱 Atomic, composable structure powered by utility-first Tailwind classes<br></br>
-
-🖼️ Integrated icon support using dynamic SVG imports<br></br>
-
-📱 Fully responsive design, optimized for both desktop and mobile<br></br>
-
-🌙 Dark mode friendly (optional support)<br></br>
-
-🚀 Why Use DezineCrafts?<br></br>
-Rapid prototyping with plug-and-play components<br></br>
-
-Easily extendable and themeable for brand customization<br></br>
-
-Built for developers who want clean, scalable, production-ready code<br></br>
-
-No dependency bloat – just Tailwind and clean JSX<br></br>
-
-DezineCrafts accelerates your workflow without sacrificing design quality or flexibility. Browse through the live components, explore the code, and start crafting your next stunning interface with ease.<br></br>
-
-Let me know if you'd like a shorter version, a more technical tone, or SEO-optimized copy.</p>
-        
+        <h3 className="w-full h-min text-body-lg font-semibold">Welcome to the DezineCrafts UI Documentation<br></br></h3>
+        <p className="text-gray-950 mb-4">DezineCrafts is designed to empower developers and designers with a professional-grade collection of pre-built, customizable UI components built entirely with Tailwind CSS. Our goal is to help you ship beautiful, responsive, and consistent interfaces faster—without sacrificing flexibility, accessibility, or design quality.</p>
+        <h3 className="w-full h-min text-body-lg font-semibold ">What's Inside This Documentation</h3>
+        <p className="text-gray-950 ">Here’s everything you’ll find in the DezineCrafts UI Kit:</p>
+        <p className="text-gray-950 mb-4">💠 Component Code: Copy-paste Tailwind-based JSX snippets for rapid implementation.<br></br>
+        💠 Component Previews: Live previews of each component in action.<br></br>
+        💠 Detailed Descriptions: Feature explanations, use-case guidance, and customization options.<br></br>
+        💠 Usage Instructions: Best practices for integrating components into your projects.</p>
+        <h3 className="w-full h-min text-body-lg font-semibold ">Overview</h3>
+        <p className="text-gray-950 mb-4">DezineCrafts offers a rich and scalable library of modern UI components tailored for real-world use. From essential elements like Buttons, Badges, and Accordions, to advanced UI building blocks such as navigation systems, tabs, forms, and status indicators — everything is designed to be intuitive, accessible, and ready to drop into production.</p>
+        <h3 className="w-full h-min text-body-lg font-semibold ">Why Choose DezineCrafts</h3>
+        <p className="text-gray-950 mb-4">💠 <strong>Build Faster</strong> <br></br> Skip redundant UI work. Our growing collection of reusable Tailwind components allows you to focus on functionality, not repetitive styling.<br></br>
+        💠 <strong>Customizable by Default</strong> <br></br>Each component is made with Tailwind utility classes so you can easily tweak styles, layouts, and responsiveness to match your brand or design system.<br></br>
+        💠 <strong>Responsive & Accessible</strong> <br></br>DezineCrafts components are built with mobile-first principles and follow accessibility best practices to support all users and devices.<br></br>
+        💠 <strong>Designed in Figma</strong> <br></br>All components in DezineCrafts are based on a carefully structured Figma UI Kit, allowing seamless design-to-development handoff and consistent visual standards across projects.<br></br>
+        💠 <strong>Rich Ecosystem</strong> (Coming Soon) <br></br>Stay tuned for advanced tooling, AI-powered design assistance to further enhance your development workflow.</p>
+        <p className="text-gray-950 mb-4">Start exploring the library below and bring your next Tailwind project to life — beautifully, consistently, and efficiently — with DezineCrafts.</p>
         </div>
     </div>
     
