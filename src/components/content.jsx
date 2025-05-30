@@ -1,7 +1,7 @@
 // src/components/content.jsx
 import ButtonDemo from './pages/button-demo';
 import Overview from './pages/overview';
-import Accordion from './pages/accordion';
+import Accordion from './pages/accordion-demo';
 
 const componentMap = {
   button: ButtonDemo,

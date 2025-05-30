@@ -14,7 +14,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
-          style="neutral"
+          style="primary"
           variant="gradient"
           shape="rounded"
           iconSize="md"
@@ -33,7 +33,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
-          style="neutral"
+          style="primary"
           variant="gradient"
           shape="rounded"
           iconSize="md"
@@ -46,7 +46,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="primary"
           variant="solid"
           shape="rounded"
           iconSize="md"
@@ -59,7 +59,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="primary"
           variant="outline"
           shape="rounded"
           iconSize="md"
@@ -72,7 +72,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="primary"
           variant="transparent"
           shape="rounded"
           iconSize="md"
@@ -85,7 +85,7 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="info"
+          style="primary"
           variant="link"
           shape="rounded"
           iconSize="md"
@@ -95,6 +95,62 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           iconRightName="Placeholder-Filled"
           >
           Hyperlink
+          </Button>
+        </div>
+        <h3 className="w-full h-min text-body-lg font-semibold">Buttons With Icons</h3>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
+          <Button
+          size="sm"
+          style="info"
+          variant="link"
+          shape="rounded"
+          iconSize="sm"
+          showLeftIcon={false}
+          showRightIcon={true}
+          iconLeftName="Placeholder-Outline"
+          iconRightName="Chevron-Right-Outline"
+          >
+          Learn More
+          </Button>
+          <Button
+          size="md"
+          style="primary"
+          variant="gradient"
+          shape="rounded"
+          iconSize="md"
+          showLeftIcon={true}
+          showRightIcon={true}
+          iconLeftName="Book-Default-Filled"
+          iconRightName="Chevron-Right-Filled"
+          >
+          Read Documentation
+          </Button>
+          <Button
+          size="md"
+          style="neutral"
+          variant="outline"
+          shape="rounded"
+          iconSize="md"
+          showLeftIcon={true}
+          showRightIcon={false}
+          iconLeftName="Cloud-Arrow-Up-Outline"
+          iconRightName="Placeholder-Filled"
+          >
+          Upload Files
+          </Button>
+          <Button
+          size="md"
+          style="neutral"
+          variant="outline"
+          shape="rounded"
+          iconSize="md"
+          showLeftIcon={true}
+          showRightIcon={false}
+          iconLeftName="google"
+          iconRightName="Placeholder-Filled"
+          >
+          Continue with Google
           </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Color Variations</h3>
@@ -184,8 +240,8 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
-          style="neutral"
-          variant="solid"
+          style="primary"
+          variant="gradient"
           shape="rounded"
           iconSize="md"
           showLeftIcon={false}
@@ -197,8 +253,8 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="neutral"
-          variant="solid"
+          style="primary"
+          variant="gradient"
           shape="square"
           iconSize="md"
           showLeftIcon={false}
@@ -210,8 +266,8 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
           <Button
           size="md"
-          style="neutral"
-          variant="solid"
+          style="primary"
+          variant="gradient"
           shape="pill"
           iconSize="md"
           showLeftIcon={false}
@@ -263,62 +319,6 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           iconRightName="Placeholder-Filled"
           >
           Large Button
-          </Button>
-        </div>
-        <h3 className="w-full h-min text-body-lg font-semibold">Buttons With Icons</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
-        <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
-          <Button
-          size="sm"
-          style="info"
-          variant="link"
-          shape="rounded"
-          iconSize="sm"
-          showLeftIcon={false}
-          showRightIcon={true}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Chevron-Right-Outline"
-          >
-          Learn More
-          </Button>
-          <Button
-          size="md"
-          style="neutral"
-          variant="gradient"
-          shape="rounded"
-          iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={true}
-          iconLeftName="Book-Default-Filled"
-          iconRightName="Chevron-Right-Filled"
-          >
-          Read Documentation
-          </Button>
-          <Button
-          size="md"
-          style="neutral"
-          variant="solid"
-          shape="rounded"
-          iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={false}
-          iconLeftName="Cloud-Arrow-Up-Outline"
-          iconRightName="Placeholder-Filled"
-          >
-          Upload Files
-          </Button>
-          <Button
-          size="md"
-          style="neutral"
-          variant="outline"
-          shape="rounded"
-          iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={false}
-          iconLeftName="google"
-          iconRightName="Placeholder-Filled"
-          >
-          Continue with Google
           </Button>
         </div>
       </div>

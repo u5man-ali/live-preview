@@ -20,7 +20,7 @@ export default function Sidebar({ onSelect }) {
   return (
     <aside className="h-screen w-full overflow-y-auto border-white-500 px-4 py-6 bg-white-300">
         <h4 className="text-body-md font-medium mb-4">Components List</h4>
-        <nav className="flex flex-col">
+        <nav className="flex flex-col gap-1">
         {sections.map((section) => (
           <Button
             size="sm"

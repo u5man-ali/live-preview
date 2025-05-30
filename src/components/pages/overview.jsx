@@ -4,7 +4,7 @@ export default function buttonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
-        <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">🧩 DezineCrafts: Ultimate UI Kit</h1>
+        <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">DezineCrafts: Ultimate UI Kit</h1>
         <p className="w-full h-min text-body-md font-normal mb-4">Tailwind CSS Components Library<br></br>
 
 Welcome to DezineCrafts – the Ultimate UI Kit, a modern, scalable, and fully customizable library of reusable components built with Tailwind CSS.<br></br>

@@ -1,9 +1,17 @@
-import Button from '../button'
+import Accordion from '../accordion'
 
 export default function buttonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
+          <Accordion
+  title="What is Tailwind CSS?"
+  style="primary"
+  size="md"
+  iconName="Chevron-Down-Outline"
+>
+  Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design.
+</Accordion>
         <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">🧩 DezineCrafts: Ultimate UI Kit</h1>
         <p className="w-full h-min text-body-md font-normal mb-4">Tailwind CSS Components Library<br></br>
 
