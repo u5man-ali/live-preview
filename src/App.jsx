@@ -10,7 +10,7 @@ function App() {
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
   return (
     <div className="w-full flex-1 min-h-screen bg-white-200">
-      <nav className="w-full h-min bg-aqua-100 border-b border-white-800 shadow-sm flex gap-4 items-center p-2 ">
+      <nav className="w-full h-min bg-aqua-100 border-b border-white-800 shadow-sm flex gap-4 items-center p-2 sticky top-0 z-50">
         <div className="w-full max-w-7xl mx-auto flex items-center gap-4 justify-start">
         <Button
           size="sm"
@@ -30,6 +30,12 @@ function App() {
         <h1 className="text-body-xl font-semibold">DezineCrafts - Ultimate UI Kit</h1></div>
       </nav>
       <div className="w-full flex gap-0 min-h-screen max-w-7xl mx-auto relative">
+          {/* Backdrop overlay: only visible when sidebar is open on mobile */}
+          {sidebarOpen && (
+            <div className="fixed w-full inset-0 bh-black-950/30 z-10 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
+            ></div>
+          )}
           {/* Sidebar block: show if open on mobile, always show on large screens */}
           <div className={`fixed lg:static z-30 top-[68px] left-0 h-[calc(100vh-68px)] w-60 shrink-0 bg-white-300 border-r border-white-500 transition-transform duration-300 ease-in-out
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:block`}
