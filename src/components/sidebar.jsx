@@ -18,16 +18,16 @@ export default function Sidebar({ onSelect }) {
   };
 
   return (
-    <aside className="sticky -left-64 bottom-0 top-0 z-1 hidden h-[calc(100vh-4px)] w-60 shrink-0 overflow-y-auto lg:left-0 lg:block border-l border-r
-        border-white-500 px-4 py-6 bg-white-300">
+    <aside className="h-full w-full overflow-y-auto border-white-500 px-4 py-6 bg-white-300">
         <h4 className="text-body-md font-medium mb-4">Getting Started</h4>
         <nav className="flex flex-col">
         {sections.map((section) => (
           <Button
-            size="md"
+            size="sm"
             variant={active === section.id ? "solid" : "transparent"} // Change variant based on active state
             style={active === section.id ? "primary" : "neutral"} // Change style based on active state
             shape="rounded"
+            iconSize="sm"
             showLeftIcon={section.showLeftIcon || false}
             showRightIcon={section.showRightIcon || false}
             iconLeftName={section.iconLeftName} // Use section's iconLeftName or null

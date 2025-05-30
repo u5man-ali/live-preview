@@ -77,7 +77,7 @@ export default function Button({
   iconRightName = "Arrow-Enter-Left-Outline", // check filenames to use other icons in src/icons
   ...props
 }) {
-  const baseClasses = "inline-flex items-center ${props.className || 'justify-center'} gap-2 font-medium transition-all";
+  const baseClasses = "inline-flex items-center gap-2 font-medium transition-all whitespace-nowrap";
   const stateClasses = disabled ? "opacity-60 cursor-not-allowed pointer-events-none" : "";
   const sizeClass = sizes[size];
   const shapeClass = shapes[shape];
@@ -107,6 +107,7 @@ export default function Button({
         shapeClass,
         variantClass,
         stateClasses,
+        className
       )}
         disabled={disabled}
         {...props}
