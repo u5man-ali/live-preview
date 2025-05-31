@@ -6,11 +6,11 @@ export default function buttonDemo() {
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
         <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">DC Button Component</h1>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">Build powerful CTAs with our Tailwind CSS-powered button component. Designed to be flexible and modern, it includes support for icons, multiple styles like primary, neutral, outline, success, and error, and works seamlessly across different screen sizes.
-Whether you're crafting call-to-actions, form submissions, or navigation triggers, this component adapts to your needs with clean, scalable styling.</p>
-<p className="w-full h-min text-body-md text-gray-950 font-normal mb-4 ">Explore the examples below to see how easily it integrates into your Tailwind-based UI projects.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">The DC Button is a versatile, fully responsive UI element crafted with Tailwind CSS, ideal for building modern interfaces that demand clarity and performance. Whether you're designing a compelling call-to-action, form submission flow, or navigation control, this component delivers flexibility, consistency, and polish across devices and use cases.
+With support for multiple styles, shapes, sizes, and icon placements, the button component adapts seamlessly to any UI scenario.</p>
+<p className="w-full h-min text-body-md text-gray-950 font-normal mb-4 ">Explore the variations below to understand its full potential and how you can integrate it effortlessly into your Tailwind-based projects.</p>
         <h3 className="w-full h-min text-body-lg font-semibold">Button</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with neutral color and gradient style. It features hover and active states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">This is the foundational version of the DC Button, featuring a clean layout with a neutral color palette and a subtle gradient style. Interactive states like hover and active transitions provide smooth feedback to enhance user experience. It’s perfect for general use across dashboards, forms, and utility actions.</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
@@ -29,7 +29,14 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Style Variations</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">DC Button supports a rich set of visual styles to suit different interaction goals:</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">
+        💠 <strong>Solid:</strong> For high-emphasis actions like primary CTAs.<br></br>
+        💠 <strong>Gradient:</strong> Adds a dynamic visual flair, ideal for modern UIs.<br></br>
+        💠 <strong>Outline:</strong> Great for secondary actions where visual balance is key.<br></br>
+        💠 <strong>Transparent:</strong> Blends with the background—perfect for minimal or embedded UIs.<br></br>
+        💠 <strong>Hyperlink:</strong> Styled like a traditional link but with button functionality for seamless integration in content-rich areas.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">Each style is built with consistency and accessibility in mind, ensuring that your design remains clean and intuitive.</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
@@ -98,7 +105,13 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Buttons With Icons</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">Buttons can include left or right icons, enhancing clarity and visual meaning. Common examples include:</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">
+        💠 “Learn More” with a right arrow<br></br>
+        💠 “Documentation” with a book icon<br></br>
+        💠 “Upload Files” with a cloud or upload symbol<br></br>
+        💠 “Continue with Google” with a branded icon</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">Icons can be customized in size and style, and you can toggle their presence based on your layout needs.</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="sm"
@@ -154,21 +167,16 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Color Variations</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">The DC Button supports contextual color schemes to communicate intent:</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">
+        💠 <strong>Primary:</strong> Main actions users should focus on<br></br>
+        💠 <strong>Neutral:</strong> Default for utility or balanced actions<br></br>
+        💠 <strong>Success:</strong> Positive actions like “Save” or “Submit”<br></br>
+        💠 <strong>Error:</strong> Alerts or destructive actions like “Delete”<br></br>
+        💠 <strong>Warning:</strong> Cautionary actions such as “Proceed with Risk”<br></br>
+        💠 <strong>Info:</strong> Informational buttons like “Details” or “View Logs”</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">Each color option is tuned for accessibility and clarity, making it easy to signal different types of actions.</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
-          <Button
-          size="md"
-          style="neutral"
-          variant="gradient"
-          shape="rounded"
-          iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
-          >
-          Neutral Color
-          </Button>
           <Button
           size="md"
           style="primary"
@@ -181,6 +189,19 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           iconRightName="Placeholder-Filled"
           >
           Primary Brand Color
+          </Button>
+          <Button
+          size="md"
+          style="neutral"
+          variant="gradient"
+          shape="rounded"
+          iconSize="md"
+          showLeftIcon={false}
+          showRightIcon={false}
+          iconLeftName="Placeholder-Outline"
+          iconRightName="Placeholder-Filled"
+          >
+          Neutral Color
           </Button>
           <Button
           size="md"
@@ -236,7 +257,12 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Shape Variations</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">Chosse from multiple shapes to align with your UI's tone and purpose:</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">
+        💠 <strong>Rounded:</strong> Soft corners for a modern, friendly feel<br></br>
+        💠 <strong>Square:</strong> Straight edges for minimal, clean designs<br></br>
+        💠 <strong>Pill:</strong> Fully rounded for high-emphasis or mobile-friendly elements</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">This flexibility lets you match the design language of your app or brand</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
@@ -279,7 +305,12 @@ Whether you're crafting call-to-actions, form submissions, or navigation trigger
           </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Size Variations</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">The example below shows a basic button with primary brand color variation. It features hover and focus states for better interactive experience.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">DC Button supports three standard sizes:</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">
+        💠 <strong>Small:</strong> Compact use cases like tables, lists, or toolbars<br></br>
+        💠 <strong>Medium:</strong> Default size for most buttons—balanced and readable<br></br>
+        💠 <strong>Large:</strong> Ideal for mobile UIs, prominent CTAs, or form submissions</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">This flexibility lets you match the design language of your app or brand</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="sm"
