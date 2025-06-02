@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Dropdown({ isOpen, children }) {
   const innerRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const el = innerRef.current;
@@ -13,10 +14,12 @@ export default function Dropdown({ isOpen, children }) {
     if (isOpen) {
       const scrollHeight = el.scrollHeight;
       setHeight(`${scrollHeight}px`);
+      setToggle(true);
 
       const timeout = setTimeout(() => {
         setHeight("auto");
-      }, 300); // Must match transition duration
+        setToggle(false);
+      }, 400); // Must match transition duration
 
       return () => clearTimeout(timeout);
     } else {
@@ -24,13 +27,18 @@ export default function Dropdown({ isOpen, children }) {
       if (height === "auto") {
         const measuredHeight = el.scrollHeight;
         setHeight(`${measuredHeight}px`);
+        setToggle(true);
 
         // Step 2: Force reflow before transitioning to 0
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            setHeight("0px");
+            setHeight("0px"); // trigger the transition to 0
           });
         });
+        const timeout = setTimeout(() => {
+          setToggle(false);
+        }, 400);
+        return () => clearTimeout(timeout);
       } else {
         setHeight("0px");
       }

@@ -1,21 +1,22 @@
 // src/components/Accordion.jsx
 import clsx from "clsx";
+import Button from './button';
 import { useEffect, useState } from "react";
 
 const sizes = {
-  sm: "text-body-sm px-3 py-2",
-  md: "text-body-md px-4 py-3",
-  lg: "text-body-lg px-5 py-4",
+  sm: "text-body-sm p-3",
+  md: "text-body-md p-4",
+  lg: "text-body-lg p-5",
 };
 
 const styles = {
   neutral: {
     base: "border border-black-100 bg-white-50 text-black-700",
-    expanded: "bg-white-100",
+    expanded: "bg-white-100 ",
   },
   primary: {
     base: "border border-aqua-500 bg-aqua-50 text-aqua-700",
-    expanded: "bg-aqua-100",
+    expanded: "bg-aqua-100 inset-4 after:inset after:rounded-[inherit] after:shadow-[inset_1px_1px_3px_rgba(255,255,255,0.75),inset_0_-2px_0px_rgba(0,0,0,0.75)]",
   },
   // Add success, error, etc. if needed
 };
@@ -77,7 +78,7 @@ export default function Accordion({
           isExpanded ? "max-h-screen py-2 px-4" : "max-h-0 p-0"
         )}
       >
-        {isExpanded && <div className="text-body-sm">{children}</div>}
+        {isExpanded && <div className={`${sizes[size]} py-0 px-0`}>{children}</div>}
       </div>
     </div>
   );

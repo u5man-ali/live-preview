@@ -13,72 +13,27 @@ const sections = [
     id: "basic-components",
     label: "Basic Components",
     children: [
-      { 
-        id: "fab",
-        label: "FAB",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "alert",
-        label: "Alert",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "badge",
-        label: "Badge",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "button",
-        label: "Button",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      }
+      { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
+      { id: "alert", label: "Alert", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",}
     ]
   },
   { 
     id: "building-blocks",
     label: "Building Blocks",
     children: [
-      { 
-        id: "accordion",
-        label: "Accrodion",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "input",
-        label: "Input",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "dropdown",
-        label: "Dropdown",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
-      {
-        id: "breadcrumb",
-        label: "Breadcrumb",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      }
+      { id: "accordion", label: "Accrodion", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "input", label: "Input", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "dropdown", label: "Dropdown", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "breadcrumb", label: "Breadcrumb", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",}
     ]
   },
   { 
     id: "ui-blocks",
     label: "UI Blocks",
     children: [
-      { 
-        id: "datepicker",
-        label: "Date Picker",
-        showLeftIcon: true,
-        iconLeftName: "Arrow-Turn-Down-Right-Outline",
-      },
+      { id: "datepicker", label: "Date Picker", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
     ]
   },
 ];
@@ -92,9 +47,9 @@ export default function Sidebar({ onSelect }) {
     onSelect(id);
 
     // If parentId is passed, ensure dropdown is expanded
-    if (parentId) {
-      setExpanded(prev => ({ ...prev, [parentId]: true }));
-    }
+    //if (parentId) {
+      //setExpanded(prev => ({ ...prev, [parentId]: true }));
+    //}
   };
 
   const toggleDropdown = (id) => {
@@ -107,13 +62,12 @@ export default function Sidebar({ onSelect }) {
         {sections.map((section) => {
           const isExpanded = expanded[section.id] || section.children?.some(child => child.id === active);
           const isActive = active === section.id;
-
           return (
             <div key={section.id} className="flex flex-col">
               <Button
                 size="md"
-                variant={isActive ? "solid" : "transparent"}
-                style={isActive ? "primary" : "neutral"}
+                variant={isActive ? "solid" : isExpanded ? "link" : "transparent"}
+                style={isActive ? "primary" : isExpanded ? "primary" : "neutral"}
                 shape="rounded"
                 iconSize="md"
                 showLeftIcon={!!section.iconLeftName}
@@ -122,9 +76,9 @@ export default function Sidebar({ onSelect }) {
                 iconRightName={section.children ? (isExpanded ? "Chevron-Up-Outline" : "Chevron-Down-Outline") : null}
                 onClick={() => {
                   if (section.children) {
-                    toggleDropdown(section.id);
+                    toggleDropdown(section.id); // sidebar item has children, toggle dropdown
                   } else {
-                    handleSelect(section.id);
+                    handleSelect(section.id); // sidebar item has no children, select it directly
                   }
                 }}
                 className="justify-start"
@@ -132,10 +86,9 @@ export default function Sidebar({ onSelect }) {
                 <span className="flex-1 truncate text-left">{section.label}</span>
               </Button>
 
-              {section.children && isExpanded && (
-                <div className="py-1 flex flex-col gap-1">
-                  {section.children && (
-                  <Dropdown isOpen={isExpanded}>
+              {section.children && (
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out
+                ${isExpanded ? "max-h-40 py-1" : "max-h-0"} pl-4 pr-2 flex flex-col gap-1`}>
                     {section.children.map((child) => (
                       <Button
                         key={child.id}
@@ -153,8 +106,6 @@ export default function Sidebar({ onSelect }) {
                         {child.label}
                       </Button>
                     ))}
-                  </Dropdown>
-                )}
                 </div>
               )}
             </div>
