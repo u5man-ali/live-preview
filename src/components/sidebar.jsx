@@ -1,44 +1,165 @@
 // src/components/sidebar.jsx
 import { useState } from "react";
 import Button from './button';
-                                                              
+import Dropdown from './dropdown';
+
+// Sidebar structure with parent and child sections
 const sections = [
-  { id: "overview", label: "Overview"},
-  { id: "button", label: "Button",  showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
-  { id: "badge", label: "Badge",  showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
-  { id: "accordion", label: "Accordion", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline" },
+  { 
+    id: "introduction",
+    label: "Introduction"
+  },
+  { 
+    id: "basic-components",
+    label: "Basic Components",
+    children: [
+      { 
+        id: "fab",
+        label: "FAB",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "alert",
+        label: "Alert",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "badge",
+        label: "Badge",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "button",
+        label: "Button",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      }
+    ]
+  },
+  { 
+    id: "building-blocks",
+    label: "Building Blocks",
+    children: [
+      { 
+        id: "accordion",
+        label: "Accrodion",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "input",
+        label: "Input",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "dropdown",
+        label: "Dropdown",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+      {
+        id: "breadcrumb",
+        label: "Breadcrumb",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      }
+    ]
+  },
+  { 
+    id: "ui-blocks",
+    label: "UI Blocks",
+    children: [
+      { 
+        id: "datepicker",
+        label: "Date Picker",
+        showLeftIcon: true,
+        iconLeftName: "Arrow-Turn-Down-Right-Outline",
+      },
+    ]
+  },
 ];
 
 export default function Sidebar({ onSelect }) {
-  const [active, setActive] = useState("overview"); //default active section
+  const [active, setActive] = useState("introduction");
+  const [expanded, setExpanded] = useState({});
 
-  const handleSelect = (id) => {
+  const handleSelect = (id, parentId = null) => {
     setActive(id);
-    onSelect(id); //notify parent component of selected component
+    onSelect(id);
+
+    // If parentId is passed, ensure dropdown is expanded
+    if (parentId) {
+      setExpanded(prev => ({ ...prev, [parentId]: true }));
+    }
+  };
+
+  const toggleDropdown = (id) => {
+    setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
   return (
     <aside className="h-screen w-full overflow-y-auto border-white-500 px-4 py-6 bg-white-300">
-        <h4 className="text-body-md font-medium mb-4">Components List</h4>
-        <nav className="flex flex-col gap-1">
-        {sections.map((section) => (
-          <Button
-            size="sm"
-            variant={active === section.id ? "solid" : "transparent"} // Change variant based on active state
-            style={active === section.id ? "primary" : "neutral"} // Change style based on active state
-            shape="rounded"
-            iconSize="sm"
-            showLeftIcon={section.showLeftIcon || false}
-            showRightIcon={section.showRightIcon || false}
-            iconLeftName={section.iconLeftName} // Use section's iconLeftName or null
-            iconRightName={section.iconRightName} // Use section's iconRightName or null
-            key={section.id}
-            onClick={() => handleSelect(section.id)}
-            className="justify-start" // override justify-center for the sidebar only
-          >
-            <span className="flex-1 truncate text-left">{section.label}</span>
-          </Button>
-        ))}
+      <nav className="flex flex-col gap-1">
+        {sections.map((section) => {
+          const isExpanded = expanded[section.id] || section.children?.some(child => child.id === active);
+          const isActive = active === section.id;
+
+          return (
+            <div key={section.id} className="flex flex-col">
+              <Button
+                size="md"
+                variant={isActive ? "solid" : "transparent"}
+                style={isActive ? "primary" : "neutral"}
+                shape="rounded"
+                iconSize="md"
+                showLeftIcon={!!section.iconLeftName}
+                showRightIcon={!!section.children}
+                iconLeftName={section.iconLeftName}
+                iconRightName={section.children ? (isExpanded ? "Chevron-Up-Outline" : "Chevron-Down-Outline") : null}
+                onClick={() => {
+                  if (section.children) {
+                    toggleDropdown(section.id);
+                  } else {
+                    handleSelect(section.id);
+                  }
+                }}
+                className="justify-start"
+              >
+                <span className="flex-1 truncate text-left">{section.label}</span>
+              </Button>
+
+              {section.children && isExpanded && (
+                <div className="py-1 flex flex-col gap-1">
+                  {section.children && (
+                  <Dropdown isOpen={isExpanded}>
+                    {section.children.map((child) => (
+                      <Button
+                        key={child.id}
+                        size="sm"
+                        variant={active === child.id ? "solid" : "transparent"}
+                        style={active === child.id ? "primary" : "neutral"}
+                        shape="rounded"
+                        iconSize="sm"
+                        showLeftIcon={true}
+                        iconLeftName= "Arrow-Turn-Down-Right-Outline"
+                        showRightIcon={false}
+                        onClick={() => handleSelect(child.id, section.id)}
+                        className="justify-start text-body-md text-left"
+                      >
+                        {child.label}
+                      </Button>
+                    ))}
+                  </Dropdown>
+                )}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </nav>
     </aside>
   );
