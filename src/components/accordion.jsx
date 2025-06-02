@@ -9,17 +9,17 @@ const sizes = {
   lg: "text-body-lg p-5",
 };
 
-const states = {
+const styles = {
   primary: {
-    base: "border border-aqua-500 bg-aqua-50 text-aqua-700",
-    expanded: "bg-aqua-100",
+    base: "border border-aqua-500 text-aqua-700",
+    expanded: "bg-aqua-50",
   },
   neutral: {
-    base: "border border-black-100 bg-white-50 text-black-700",
-    expanded: "bg-white-100 ",
+    base: "border border-black-100 text-black-700",
+    expanded: "bg-white-500 ",
   },
   transparent: {
-    base: "bg-white-50 text-black-700",
+    base: "border border-white-500 text-black-700",
     expanded: "bg-white-100 ",
   },
 
@@ -30,13 +30,12 @@ export default function Accordion({
   title,
   children,
   size = "md", // "sm", "md", "lg"
-  state = "neutral", // "neutral", "primary", ...
+  style = "neutral", // "neutral", "primary", ...
   iconName = "Chevron-Down-Outline", // your icons
   defaultExpanded = false,
   className = "",
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const [Icon, setIcon] = useState(null);
 
   const toggleAccordion = () => setIsExpanded((prev) => !prev);
 
@@ -54,8 +53,8 @@ export default function Accordion({
     <div
       className={clsx(
         "w-full rounded-curve-md transition-all duration-200 ease-in-out",
-        states[state]?.base,
-        isExpanded && states[state]?.expanded,
+        styles[style]?.base,
+        isExpanded && styles[style]?.expanded,
         className
       )}
     >
@@ -64,11 +63,12 @@ export default function Accordion({
         onClick={toggleAccordion}
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer ",
-          sizes[size]
+          sizes[size],
+          isExpanded && style === "transparent" ? "border-b-2 border-b-white-500" : ""
         )}
         variant={isExpanded ? "gradient" : "transparent"}
+        style={style}
         shape="inherit"
-        state={state}
         iconSize={size}
         showLeftIcon={false}
         iconLeftName= "Arrow-Turn-Down-Right-Outline"
@@ -81,10 +81,10 @@ export default function Accordion({
       <div
         className={clsx(
           "overflow-hidden transition-all duration-300 ease-in-out",
-          isExpanded ? "max-h-screen py-2 px-4" : "max-h-0 p-0"
+          isExpanded ? "max-h-screen " : "max-h-0 p-0"
         )}
       >
-        {isExpanded && <div className={`${sizes[size]} py-0 px-0`}>{children}</div>}
+        {isExpanded && <div className={`${sizes[size]} `}>{children}</div>}
       </div>
     </div>
   );

@@ -25,8 +25,8 @@ export default function buttonDemo() {
         </div>
         <div className="w-full h-min flex justify-center items-center gap-4 mb-4 flex-wrap">
           <Accordion
-          title="What is Tailwind CSS?"
-          style="transparent"
+          title="Where do I find the documentation for Tailwind CSS?"
+          style="primary"
           variant="transparent"
           size="sm"
           iconName="Chevron-Down-Outline"
