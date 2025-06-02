@@ -3,51 +3,45 @@ import Accordion from '../accordion'
 export default function buttonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-        <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">
+        <div className="w-full h-min flex justify-center items-center gap-4 mb-4 flex-wrap">
           <Accordion
-  title="What is Tailwind CSS?"
-  style="primary"
-  size="md"
-  iconName="Chevron-Down-Outline"
->
-  Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design.
-</Accordion>
-        <h1 className="w-full h-min text-body-xxl font-bold border-b border-white-600 py-2">🧩 DezineCrafts: Ultimate UI Kit</h1>
-        <p className="w-full h-min text-body-md font-normal mb-4">Tailwind CSS Components Library<br></br>
+          title="What is Tailwind CSS?"
+          style="neutral"
+          size="lg"
+          iconName="Chevron-Down-Outline"
+          >
+            Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design.
+          </Accordion>
+        </div>
+        <div className="w-full h-min flex justify-center items-center gap-4 mb-4 flex-wrap">
+          <Accordion
+          title="How can we build a responsive design with Tailwind CSS?"
+          style="primary"
+          size="md"
+          iconName="Chevron-Down-Outline"
+          >
+            Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design.
+          </Accordion>
+        </div>
+        <div className="w-full h-min flex justify-center items-center gap-4 mb-4 flex-wrap">
+          <Accordion
+          title="What is Tailwind CSS?"
+          style="transparent"
+          variant="transparent"
+          size="sm"
+          iconName="Chevron-Down-Outline"
+          >
+            Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design.
+          </Accordion>
+        </div>
 
-Welcome to DezineCrafts – the Ultimate UI Kit, a modern, scalable, and fully customizable library of reusable components built with Tailwind CSS.<br></br>
-
-Designed for speed, consistency, and responsiveness, DezineCrafts helps developers and designers rapidly build beautiful interfaces for web applications of any size or complexity.<br></br>
-
-🎯 What You'll Find<br></br>
-
-✅ Pre-built UI components like buttons, badges, modals, and accordions<br></br>
-
-🎨 Multiple styles & variants for each component (e.g., primary, neutral, outline, success)<br></br>
-
-🧱 Atomic, composable structure powered by utility-first Tailwind classes<br></br>
-
-🖼️ Integrated icon support using dynamic SVG imports<br></br>
-
-📱 Fully responsive design, optimized for both desktop and mobile<br></br>
-
-🌙 Dark mode friendly (optional support)<br></br>
-
-🚀 Why Use DezineCrafts?<br></br>
-Rapid prototyping with plug-and-play components<br></br>
-
-Easily extendable and themeable for brand customization<br></br>
-
-Built for developers who want clean, scalable, production-ready code<br></br>
-
-No dependency bloat – just Tailwind and clean JSX<br></br>
-
-DezineCrafts accelerates your workflow without sacrificing design quality or flexibility. Browse through the live components, explore the code, and start crafting your next stunning interface with ease.<br></br>
-
-Let me know if you'd like a shorter version, a more technical tone, or SEO-optimized copy.</p>
-        
+        <div className="relative w-full h-min bg-white overflow-hidden">
+        {/* Outer crescent */}
+        <div className="absolute w-full top-0 left-0 h-full border-blue-500 border-l-4 rounded-l-lg z-0" />
+        {/* Inner cutout to create crescent shape */}
+        <div className="absolute top-0 w-full h-full bg-white rounded-r-full z-10" />
+        <p className="relative z-20 p-4">Crescent Border</p>
         </div>
     </div>
-    
   );
 }

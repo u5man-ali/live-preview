@@ -9,15 +9,20 @@ const sizes = {
   lg: "text-body-lg p-5",
 };
 
-const styles = {
+const states = {
+  primary: {
+    base: "border border-aqua-500 bg-aqua-50 text-aqua-700",
+    expanded: "bg-aqua-100",
+  },
   neutral: {
     base: "border border-black-100 bg-white-50 text-black-700",
     expanded: "bg-white-100 ",
   },
-  primary: {
-    base: "border border-aqua-500 bg-aqua-50 text-aqua-700",
-    expanded: "bg-aqua-100 inset-4 after:inset after:rounded-[inherit] after:shadow-[inset_1px_1px_3px_rgba(255,255,255,0.75),inset_0_-2px_0px_rgba(0,0,0,0.75)]",
+  transparent: {
+    base: "bg-white-50 text-black-700",
+    expanded: "bg-white-100 ",
   },
+
   // Add success, error, etc. if needed
 };
 
@@ -25,7 +30,7 @@ export default function Accordion({
   title,
   children,
   size = "md", // "sm", "md", "lg"
-  style = "neutral", // "neutral", "primary", ...
+  state = "neutral", // "neutral", "primary", ...
   iconName = "Chevron-Down-Outline", // your icons
   defaultExpanded = false,
   className = "",
@@ -49,29 +54,30 @@ export default function Accordion({
     <div
       className={clsx(
         "w-full rounded-curve-md transition-all duration-200 ease-in-out",
-        styles[style]?.base,
-        isExpanded && styles[style]?.expanded,
+        states[state]?.base,
+        isExpanded && states[state]?.expanded,
         className
       )}
     >
-      <button
+      <div className={isExpanded ? "rounded-bl-0 rounded-br-0 rounded-tl-[inherit] rounded-tr-[inherit]" : "rounded-[inherit]"}>
+      <Button
         onClick={toggleAccordion}
         className={clsx(
-          "flex w-full items-center justify-between font-medium cursor-pointer",
+          "flex w-full items-center justify-between font-medium cursor-pointer ",
           sizes[size]
         )}
+        variant={isExpanded ? "gradient" : "transparent"}
+        shape="inherit"
+        state={state}
+        iconSize={size}
+        showLeftIcon={false}
+        iconLeftName= "Arrow-Turn-Down-Right-Outline"
+        showRightIcon={true}
+        iconRightName= {isExpanded ? "Chevron-Up-Outline" : "Chevron-Down-Outline"}
       >
         <span>{title}</span>
-        {Icon && (
-          <Icon
-            className={clsx(
-              "transition-transform duration-200",
-              isExpanded ? "rotate-180" : "rotate-0",
-              "w-5 h-5"
-            )}
-          />
-        )}
-      </button>
+      </Button>
+      </div>
       <div
         className={clsx(
           "overflow-hidden transition-all duration-300 ease-in-out",

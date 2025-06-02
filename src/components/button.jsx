@@ -11,6 +11,7 @@ const shapes = {
   rounded: "rounded-curve-md",
   square: "rounded-none",
   pill: "rounded-full",
+  inherit: "rounded-[inherit]"
 };
 const iconSizes = {
   sm: "w-4 h-4",
