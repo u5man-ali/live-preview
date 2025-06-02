@@ -88,7 +88,7 @@ export default function Sidebar({ onSelect }) {
 
               {section.children && (
                 <div className={`overflow-hidden transition-all duration-300 ease-in-out
-                ${isExpanded ? "max-h-40 py-1" : "max-h-0"} pl-4 pr-2 flex flex-col gap-1`}>
+                ${isExpanded ? "max-h-40 py-1" : "max-h-0"} flex flex-col gap-1`}>
                     {section.children.map((child) => (
                       <Button
                         key={child.id}
