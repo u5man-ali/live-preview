@@ -19,7 +19,7 @@ const styles = {
     expanded: "bg-white-500 ",
   },
   transparent: {
-    base: "border border-white-500 text-black-700",
+    base: "bg-white-50 text-black-700",
     expanded: "bg-white-100 ",
   },
 
@@ -63,10 +63,10 @@ export default function Accordion({
         onClick={toggleAccordion}
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer ",
-          sizes[size],
-          isExpanded && style === "transparent" ? "border-b-2 border-b-white-500" : ""
+          isExpanded && style === "transparent" ? "border-b-2 border-b-white-200" : ""
         )}
         variant={isExpanded ? "gradient" : "transparent"}
+        size={size}
         style={style}
         shape="inherit"
         iconSize={size}
