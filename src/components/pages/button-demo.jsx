@@ -26,7 +26,20 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           >
           Basic Button
           </Button>
-          
+          <Button
+          size="md"
+          style="primary"
+          variant="gradient"
+          shape="rounded"
+          iconSize="md"
+          disabled={true}
+          showLeftIcon={false}
+          showRightIcon={false}
+          iconLeftName="Placeholder-Outline"
+          iconRightName="Placeholder-Filled"
+          >
+          Disabled Button
+          </Button>
         </div>
         <h3 className="w-full h-min text-body-lg font-semibold">Button Style Variations</h3>
         <p className="w-full h-min text-body-md text-gray-950 font-normal">DC Button supports a rich set of visual styles to suit different interaction goals:</p>
