@@ -28,7 +28,7 @@ export default function buttonDemo() {
           title="Can I customize the components in DezineCrafts UI Kit?"
           style="transparent"
           variant="transparent"
-          size="sm"
+          size="md"
           iconName="Chevron-Down-Outline"
           >
             Absolutely! Every component in the UI kit is designed with customization in mind. You can adjust styles using Tailwind classes, swap icons, change variants (like primary, neutral, etc.), and override props to match your branding and layout requirements.
