@@ -57,7 +57,7 @@ export default function Sidebar({ onSelect }) {
   };
 
   return (
-    <aside className="h-screen w-full overflow-y-auto border-white-500 px-4 py-6 bg-white-300">
+    <aside className="h-screen w-full overflow-y-auto border-r border-white-800 px-4 py-6 bg-neutral-200">
       <nav className="flex flex-col gap-1">
         {sections.map((section) => {
           const isExpanded = expanded[section.id] || section.children?.some(child => child.id === active);
