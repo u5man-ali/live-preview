@@ -10,7 +10,7 @@ export default function buttonDemo() {
 With support for multiple styles, shapes, sizes, and icon placements, the button component adapts seamlessly to any UI scenario.</p>
 <p className="w-full h-min text-body-md text-gray-950 font-normal mb-4 ">Explore the variations below to understand its full potential and how you can integrate it effortlessly into your Tailwind-based projects.</p>
         <h3 className="w-full h-min text-body-lg font-semibold">Button</h3>
-        <p className="w-full h-min text-body-md text-gray-950 font-normal">This is the foundational version of the DC Button, featuring a clean layout with a neutral color palette and a subtle gradient style. Interactive states like hover and active transitions provide smooth feedback to enhance user experience. It’s perfect for general use across dashboards, forms, and utility actions.</p>
+        <p className="w-full h-min text-body-md text-gray-950 font-normal">This is the foundational version of the DC Button, featuring a clean layout with a primary color palette and a subtle gradient style along with it's disabled (muted) version. Interactive states like hover and active transitions provide smooth feedback to enhance user experience. It’s perfect for general use across dashboards, forms, and utility actions.</p>
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
@@ -53,7 +53,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="md"
-          style="primary"
+          style="secondary"
           variant="gradient"
           shape="rounded"
           iconSize="md"
@@ -66,7 +66,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="primary"
+          style="secondary"
           variant="solid"
           shape="rounded"
           iconSize="md"
@@ -79,7 +79,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="primary"
+          style="secondary"
           variant="outline"
           shape="rounded"
           iconSize="md"
@@ -92,7 +92,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="primary"
+          style="secondary"
           variant="transparent"
           shape="rounded"
           iconSize="md"
@@ -105,7 +105,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="primary"
+          style="secondary"
           variant="link"
           shape="rounded"
           iconSize="md"
@@ -154,7 +154,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="secondary"
           variant="outline"
           shape="rounded"
           iconSize="md"
@@ -167,7 +167,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="secondary"
           variant="outline"
           shape="rounded"
           iconSize="md"
@@ -183,7 +183,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
         <p className="w-full h-min text-body-md text-gray-950 font-normal">The DC Button supports contextual color schemes to communicate intent:</p>
         <p className="w-full h-min text-body-md text-gray-950 font-normal">
         💠 <strong>Primary:</strong> Main actions users should focus on<br></br>
-        💠 <strong>Neutral:</strong> Default for utility or balanced actions<br></br>
+        💠 <strong>Secondary:</strong> Default for utility or balanced actions<br></br>
         💠 <strong>Success:</strong> Positive actions like “Save” or “Submit”<br></br>
         💠 <strong>Error:</strong> Alerts or destructive actions like “Delete”<br></br>
         💠 <strong>Warning:</strong> Cautionary actions such as “Proceed with Risk”<br></br>
@@ -205,7 +205,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="secondary"
           variant="gradient"
           shape="rounded"
           iconSize="md"
@@ -214,7 +214,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           iconLeftName="Placeholder-Outline"
           iconRightName="Placeholder-Filled"
           >
-          Neutral Color
+          Secondary Color
           </Button>
           <Button
           size="md"
@@ -327,7 +327,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
         <div className="w-full border border-white-600 rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4">
           <Button
           size="sm"
-          style="neutral"
+          style="secondary"
           variant="gradient"
           shape="rounded"
           iconSize="sm"
@@ -340,7 +340,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="md"
-          style="neutral"
+          style="secondary"
           variant="gradient"
           shape="rounded"
           iconSize="md"
@@ -353,7 +353,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           </Button>
           <Button
           size="lg"
-          style="neutral"
+          style="secondary"
           variant="gradient"
           shape="rounded"
           iconSize="lg"

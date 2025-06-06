@@ -29,7 +29,7 @@ function App() {
         <img src="DezineCrafts.svg" alt="Dezine Crafts Logo" className="w-12 h-12"></img>
         <h1 className="text-body-xl font-semibold">DezineCrafts - Ultimate UI Kit</h1></div>
       </nav>
-      <div className="w-full flex gap-0 min-h-screen max-w-7xl mx-auto relative">
+      <div className="w-full flex gap-0 min-h-full max-w-7xl mx-auto relative">
           {/* Backdrop overlay: only visible when sidebar is open on mobile */}
           {sidebarOpen && (
             <div className="fixed w-full inset-0 bg-black/30 z-10 lg:hidden"
@@ -37,7 +37,7 @@ function App() {
             ></div>
           )}
           {/* Sidebar block: show if open on mobile, always show on large screens */}
-          <div className={`fixed lg:static z-30 top-[68px] left-0 h-screen-full w-60 shrink-0 transition-transform duration-300 ease-in-out
+          <div className={`fixed lg:static z-30 top-[68px] left-0 h-screen-full w-60 shrink-0 bg-neutral-200 border-r border-white-800 transition-transform duration-300 ease-in-out
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:block`}
           >
             {/*Sidebar imported from /components/sidebar.jsx*/}

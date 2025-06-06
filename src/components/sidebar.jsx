@@ -57,7 +57,7 @@ export default function Sidebar({ onSelect }) {
   };
 
   return (
-    <aside className="h-screen w-full overflow-y-auto border-r border-white-800 px-4 py-6 bg-neutral-200">
+    <aside className="h-screen w-full overflow-y-auto px-4 py-6">
       <nav className="flex flex-col gap-1">
         {sections.map((section) => {
           const isExpanded = expanded[section.id] || section.children?.some(child => child.id === active);
@@ -67,7 +67,7 @@ export default function Sidebar({ onSelect }) {
               <Button
                 size="md"
                 variant={isActive ? "solid" : isExpanded ? "link" : "transparent"}
-                style={isActive ? "primary" : isExpanded ? "primary" : "neutral"}
+                style={isActive ? "primary" : isExpanded ? "primary" : "secondary"}
                 shape="rounded"
                 iconSize="md"
                 showLeftIcon={!!section.iconLeftName}
@@ -94,7 +94,7 @@ export default function Sidebar({ onSelect }) {
                         key={child.id}
                         size="sm"
                         variant={active === child.id ? "solid" : "transparent"}
-                        style={active === child.id ? "primary" : "neutral"}
+                        style={active === child.id ? "primary" : "secondary"}
                         shape="rounded"
                         iconSize="sm"
                         showLeftIcon={true}
