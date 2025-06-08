@@ -11,11 +11,11 @@ const sizes = {
 
 const styles = {
   primary: {
-    base: "border border-aqua-500 text-aqua-700",
+    base: "border border-primary-500 text-primary-700",
     expanded: "bg-aqua-50",
   },
   neutral: {
-    base: "border border-black-100 text-black-700",
+    base: "border border-neutral-100 text-neutral-900",
     expanded: "bg-white-500 ",
   },
   transparent: {
@@ -63,7 +63,7 @@ export default function Accordion({
         onClick={toggleAccordion}
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer ",
-          isExpanded && style === "transparent" ? "border-b-2 border-b-white-200" : ""
+          isExpanded && style === "transparent" ? "border-b-2 border-b-white-600" : ""
         )}
         variant={isExpanded ? "gradient" : "transparent"}
         size={size}

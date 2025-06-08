@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useState } from 'react'
 import Sidebar from './components/sidebar'
-import Content from './components/content'
+import Content from './content'
 import Button from './components/button';
 
 function App() {
