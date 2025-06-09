@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
+import {brandColors} from './src/styles/brand-colors'
+const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors');
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -16,6 +19,14 @@ export default {
         'max': {max: "1536px"} // 2X large devices
       },
       colors: {
+        surface: {
+          'neutral-primary': 'var(--neutral-primary)',
+          'neutral-secondary': 'var(--neutral-secondary)',
+          'neutral-tertiary': 'var(--neutral-tertiary)',
+          'neutral-bg': 'var(--neutral-bg)',
+          'neutral-bw': 'var(--neutral-bw)',
+          'neutral-wb': 'var(--neutral-wb)',
+        },
         white: {
           50: '#ffffff',
           100: '#fafafa',
@@ -225,5 +236,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addBase, theme }) {
+      const extract = (obj, prefix = '') => Object.keys(obj).reduce((res, key) => {
+        const value = obj[key];
+        if (typeof value === 'string') {
+          res[`--color${prefix}-${key}`] = value;
+        } else {
+          Object.assign(res, extract(value, `${prefix}-${key}`));
+        }
+        return res;
+      }, {});
+
+      addBase({ ':root': extract(theme('colors')) });
+    }),
+  ],
 }

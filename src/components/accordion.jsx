@@ -63,7 +63,7 @@ export default function Accordion({
         onClick={toggleAccordion}
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer ",
-          isExpanded && style === "transparent" ? "border-b-2 border-b-white-600" : ""
+          isExpanded && style === "transparent" ? "border-b-2 border-b-neutral-100" : ""
         )}
         variant={isExpanded ? "gradient" : "transparent"}
         size={size}

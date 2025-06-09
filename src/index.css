@@ -1,71 +1,117 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --neutral-white: #ffffff; /*constant white*/
+    --neutral-black: #000000; /*constant black*/
+    --neutral-bw: '#000000'; /*black that turns white in dark mode*/
+    --neutral-wb: '#ffffff'; /*white that turns black in dark mode*/
+    --neutral-primary: #ffffff; /*background color for active surfaces, cards, etc*/
+    --neutral-secondary: theme('colors.stone.50'); /*background color for secondary surfaces, forms, input fills */
+    --neutral-tertiary: theme('colors.stone.200'); /*background color for disabled, muted elements*/
+    --neutral-bg: theme('colors.stone.100'); /*main background color for the bottom surface*/
+    --neutral-rest: theme('colors.stone.700'); /*component fill for the rest state mostly buttons*/
+    --neutral-hover: theme('colors.stone.600'); /*component fill for the hover state mostly buttons*/
+    --neutral-focus: theme('colors.stone.800'); /*component fill for the focus state mostly buttons*/
+
+    --brand-primary-rest: theme('colors.cyan.700'); /*component fill for the rest state mostly buttons*/
+    --brand-primary-hover: theme('colors.cyan.600'); /*component fill for the hover state mostly buttons*/
+    --brand-primary-focus: theme('colors.cyan.800'); /*component fill for the focus state mostly buttons*/
+    --brand-primary-bg: theme('colors.cyan.50'); /*brand primary background*/
+    --brand-primary-subtle: theme('colors.cyan.100'); /*subtle shade of brand primary*/
+
+    --brand-secondary-rest: theme('colors.purple.700'); /*component fill for the rest state mostly buttons*/
+    --brand-secondary-hover: theme('colors.purple.600'); /*component fill for the hover state mostly buttons*/
+    --brand-secondary-focus: theme('colors.purple.800'); /*component fill for the focus state mostly buttons*/
+    --brand-secondary-bg: theme('colors.purple.50'); /*brand secondary background*/
+    --brand-secondary-subtle: theme('colors.purple.100'); /*subtle shade of brand secondary*/
+
+    --brand-tertiary-rest: theme('colors.yellow.700'); /*component fill for the rest state mostly buttons*/
+    --brand-tertiary-hover: theme('colors.yellow.600'); /*component fill for the hover state mostly buttons*/
+    --brand-tertiary-focus: theme('colors.yellow.800'); /*component fill for the focus state mostly buttons*/
+    --brand-tertiary-bg: theme('colors.yellow.50'); /*brand tertiary background*/
+    --brand-tertiary-subtle: theme('colors.yellow.100'); /*subtle shade of brand tertiary*/
+
+    --semantic-success-rest: theme('colors.emerald.700'); /*component fill for the rest state mostly buttons*/
+    --semantic-success-hover: theme('colors.emerald.600'); /*component fill for the hover state mostly buttons*/
+    --semantic-success-focus: theme('colors.emerald.800'); /*component fill for the focus state mostly buttons*/
+    --semantic-success-bg: theme('colors.emerald.50'); /*brand success background*/
+    --semantic-success-subtle: theme('colors.emerald.100'); /*subtle shade of semantic success*/
+
+    --semantic-error-rest: theme('colors.red.700'); /*component fill for the rest state mostly buttons*/
+    --semantic-error-hover: theme('colors.red.600'); /*component fill for the hover state mostly buttons*/
+    --semantic-error-focus: theme('colors.red.800'); /*component fill for the focus state mostly buttons*/
+    --semantic-error-bg: theme('colors.red.50'); /*brand error background*/
+    --semantic-error-subtle: theme('colors.red.100'); /*subtle shade of semantic error*/
+
+    --semantic-warning-rest: theme('colors.amber.700'); /*component fill for the rest state mostly buttons*/
+    --semantic-warning-hover: theme('colors.amber.600'); /*component fill for the hover state mostly buttons*/
+    --semantic-warning-focus: theme('colors.amber.800'); /*component fill for the focus state mostly buttons*/
+    --semantic-warning-bg: theme('colors.amber.50'); /*brand warning background*/
+    --semantic-warning-subtle: theme('colors.amber.100'); /*subtle shade of semantic warning*/
+
+    --semantic-info-rest: theme('colors.indigo.700'); /*component fill for the rest state mostly buttons*/
+    --semantic-info-hover: theme('colors.indigo.600'); /*component fill for the hover state mostly buttons*/
+    --semantic-info-focus: theme('colors.indigo.800'); /*component fill for the focus state mostly buttons*/
+    --semantic-info-bg: theme('colors.indigo.50'); /*brand info background*/
+    --semantic-info-subtle: theme('colors.indigo.100'); /*subtle shade of semantic info*/
   }
-  a:hover {
-    color: #747bff;
+  .dark {
+    --neutral-white: #ffffff; /*constant white*/
+    --neutral-black: #000000; /*constant black*/
+    --neutral-bw: '#ffffff'; /*black that turns white in dark mode*/
+    --neutral-wb: '#000000'; /*white that turns black in dark mode*/
+    --neutral-primary: theme('colors.stone.950'); /*background color for active surfaces, cards, etc*/
+    --neutral-secondary: theme('colors.stone.800'); /*background color for secondary surfaces, forms, input fills */
+    --neutral-tertiary: theme('colors.stone.700'); /*background color for disabled, muted elements*/
+    --neutral-bg: theme('colors.stone.900'); /*main background color for the bottom surface*/
+    --neutral-rest: theme('colors.stone.600'); /*component fill for the rest state mostly buttons*/
+    --neutral-hover: theme('colors.stone.500'); /*component fill for the hover state mostly buttons*/
+    --neutral-focus: theme('colors.stone.700'); /*component fill for the focus state mostly buttons*/
+
+    --brand-primary-rest: theme('colors.cyan.600'); /*component fill for the rest state mostly buttons*/
+    --brand-primary-hover: theme('colors.cyan.500'); /*component fill for the hover state mostly buttons*/
+    --brand-primary-focus: theme('colors.cyan.700'); /*component fill for the focus state mostly buttons*/
+    --brand-primary-bg: theme('colors.cyan.950'); /*brand primary background*/
+    --brand-primary-subtle: theme('colors.cyan.900'); /*subtle shade of brand primary*/
+
+    --brand-secondary-rest: theme('colors.purple.600'); /*component fill for the rest state mostly buttons*/
+    --brand-secondary-hover: theme('colors.purple.500'); /*component fill for the hover state mostly buttons*/
+    --brand-secondary-focus: theme('colors.purple.700'); /*component fill for the focus state mostly buttons*/
+    --brand-secondary-bg: theme('colors.purple.950'); /*brand secondary background*/
+    --brand-secondary-subtle: theme('colors.purple.900'); /*subtle shade of brand secondary*/
+
+    --brand-tertiary-rest: theme('colors.yellow.600'); /*component fill for the rest state mostly buttons*/
+    --brand-tertiary-hover: theme('colors.yellow.500'); /*component fill for the hover state mostly buttons*/
+    --brand-tertiary-focus: theme('colors.yellow.700'); /*component fill for the focus state mostly buttons*/
+    --brand-tertiary-bg: theme('colors.yellow.950'); /*brand tertiary background*/
+    --brand-tertiary-subtle: theme('colors.yellow.900'); /*subtle shade of brand tertiary*/
+
+    --semantic-success-rest: theme('colors.emerald.600'); /*component fill for the rest state mostly buttons*/
+    --semantic-success-hover: theme('colors.emerald.500'); /*component fill for the hover state mostly buttons*/
+    --semantic-success-focus: theme('colors.emerald.700'); /*component fill for the focus state mostly buttons*/
+    --semantic-success-bg: theme('colors.emerald.950'); /*brand success background*/
+    --semantic-success-subtle: theme('colors.emerald.900'); /*subtle shade of semantic success*/
+
+    --semantic-error-rest: theme('colors.red.600'); /*component fill for the rest state mostly buttons*/
+    --semantic-error-hover: theme('colors.red.500'); /*component fill for the hover state mostly buttons*/
+    --semantic-error-focus: theme('colors.red.700'); /*component fill for the focus state mostly buttons*/
+    --semantic-error-bg: theme('colors.red.950'); /*brand error background*/
+    --semantic-error-subtle: theme('colors.red.900'); /*subtle shade of semantic error*/
+
+    --semantic-warning-rest: theme('colors.amber.500'); /*component fill for the rest state mostly buttons*/
+    --semantic-warning-hover: theme('colors.amber.400'); /*component fill for the hover state mostly buttons*/
+    --semantic-warning-focus: theme('colors.amber.600'); /*component fill for the focus state mostly buttons*/
+    --semantic-warning-bg: theme('colors.amber.950'); /*brand warning background*/
+    --semantic-warning-subtle: theme('colors.amber.900'); /*subtle shade of semantic warning*/
+
+    --semantic-info-rest: theme('colors.indigo.600'); /*component fill for the rest state mostly buttons*/
+    --semantic-info-hover: theme('colors.indigo.500'); /*component fill for the hover state mostly buttons*/
+    --semantic-info-focus: theme('colors.indigo.700'); /*component fill for the focus state mostly buttons*/
+    --semantic-info-bg: theme('colors.indigo.950'); /*brand info background*/
+    --semantic-info-subtle: theme('colors.indigo.900'); /*subtle shade of semantic info*/
   }
-  button {
-    background-color: #f9f9f9;
   }
-}*/

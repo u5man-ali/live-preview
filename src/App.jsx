@@ -1,18 +1,33 @@
 import './App.css'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Sidebar from './components/sidebar'
 import Content from './content'
 import Button from './components/button';
+import sun from './icons/Weather-Sunny-Outline.svg'
+import moon from './icons/Weather-Moon-Outline.svg'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('introduction');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+  const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
+
   return (
-    <div className="w-full flex-1 min-h-screen bg-neutral-100">
+    <div className="w-full flex-1 min-h-screen bg-surface-neutral-bg">
       <nav className="w-full h-min bg-primary-50 border-b border-white-800 shadow-sm flex gap-4 items-center px-4 py-4 sticky top-0 z-50">
         <div className="w-full max-w-7xl mx-auto flex items-center gap-4 justify-start">
-        <Button
+        <Button //sidebar toggle button
           size="sm"
           variant="gradient"
           style="primary"
@@ -27,7 +42,20 @@ function App() {
             {/* this button has not text label, only left icon */}
         </Button>
         <img src="DezineCrafts.svg" alt="Dezine Crafts Logo" className="w-12 h-12"></img>
-        <h1 className="text-body-xl font-semibold">DezineCrafts - Ultimate UI Kit</h1></div>
+        <h1 className="w-full text-body-xl font-semibold">DezineCrafts - Ultimate UI Kit</h1>
+        <Button //theme toggle button
+          size="sm"
+          variant="transparent"
+          style="neutral"
+          iconSize="sm"
+          showLeftIcon={true}
+          showRightIcon={false}
+          iconLeftName={theme == 'dark' ? "Weather-Sunny-Outline": "Weather-Moon-Outline"}
+          onClick={toggleTheme}
+        >
+
+        </Button>
+        </div>
       </nav>
       <div className="w-full flex gap-0 min-h-full max-w-7xl mx-auto relative">
           {/* Backdrop overlay: only visible when sidebar is open on mobile */}
@@ -52,7 +80,6 @@ function App() {
             <Content selectedPage={selectedPage} />
           </div>
       </div>
-      {/* Place your components here */}
     </div>
   )
 }
