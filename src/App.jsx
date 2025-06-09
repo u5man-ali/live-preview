@@ -53,7 +53,7 @@ function App() {
           iconLeftName={theme == 'dark' ? "Weather-Sunny-Outline": "Weather-Moon-Outline"}
           onClick={toggleTheme}
         >
-          {theme === 'dark' ? 'Light': 'Dark'}
+          {theme === 'dark' ? 'Go Bright': 'Go Dark'}
         </Button>
         </div>
       </nav>
