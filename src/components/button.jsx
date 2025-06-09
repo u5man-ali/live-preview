@@ -20,18 +20,18 @@ const iconSizes = {
 }
 const styles = {
   primary: {
-    gradient: "relative bg-gradient-to-b from-primary-600 to-primary-800 text-white-50 hover:bg-gradient-to-b hover:from-primary-500 hover:to-primary-700 active:ring-1 active:ring-offset-1 active:ring-primary-500 active:bg-gradient-to-b active:from-primary-800 active:to-primary-600 focus:bg-gradient-to-b focus:from-primary-700 focus:to-primary-900 align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",
-    solid: "bg-primary-700 hover:bg-primary-600 text-white-50 active:bg-primary-800 ",
-    outline: "border-2 border-primary-700 text-primary-700 hover:border-primary-600 hover:text-primary-600 active:bg-primary-50 active:text-primary-800",
-    transparent: "bg-transparent text-primary-700 hover:bg-neutral-50 active:bg-neutral-100",
-    link: "bg-transparent text-primary-700 hover:underline active:text-primary-800"
+    gradient: "relative bg-gradient-to-b from-brand-primary-rest to-brand-primary-focus text-neutral-white hover:bg-gradient-to-b hover:from-brand-primary-hover hover:to-brand-primary-rest active:ring-1 active:ring-offset-1 active:ring-brand-primary-regular active:bg-gradient-to-b active:from-brand-primary-focus active:to-brand-primary-rest focus:bg-gradient-to-b focus:from-brand-primary-hover focus:to-brand-primary-focus align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",
+    solid: "bg-brand-primary-rest hover:bg-brand-primary-hover text-neutral-white active:bg-brand-primary-focus ",
+    outline: "border-2 border-brand-primary-rest text-brand-primary-default hover:border-brand-primary-hover hover:text-brand-primary-hovered active:bg-brand-primary-bg active:text-brand-primary-focused",
+    transparent: "bg-transparent text-brand-primary-default hover:bg-brand-primary-light active:bg-brand-primary-bg",
+    link: "bg-transparent text-brand-primary-default hover:underline active:text-brand-primary-focused"
   },
     secondary: {
-    gradient: "relative bg-gradient-to-b from-neutral-600 to-neutral-800 text-white-50 hover:bg-gradient-to-b hover:from-neutral-500 hover:to-neutral-700 active:ring-1 active:ring-offset-1 active:ring-neutral-500 active:bg-gradient-to-b active:from-neutral-800 active:to-neutral-600 focus:bg-gradient-to-b focus:from-neutral-700 focus:to-neutral-900 align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md focus:shadow-none after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",
-    solid: "bg-neutral-700 hover:bg-neutral-600 text-white-50 active:bg-neutral-800 ",
-    outline: "border-2 border-neutral-700 text-neutral-700 hover:border-neutral-600 hover:text-neutral-600 active:bg-neutral-50 active:text-neutral-800",
-    transparent: "bg-transparent text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100",
-    link: "bg-transparent text-neutral-700 hover:underline active:text-neutral-800"
+    gradient: "relative bg-gradient-to-b from-neutral-rest to-neutral-focus text-neutral-white hover:bg-gradient-to-b hover:from-neutral-500 hover:to-neutral-700 active:ring-1 active:ring-offset-1 active:ring-neutral-500 active:bg-gradient-to-b active:from-neutral-800 active:to-neutral-600 focus:bg-gradient-to-b focus:from-neutral-700 focus:to-neutral-900 align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md focus:shadow-none after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",
+    solid: "bg-neutral-rest hover:bg-neutral-hover text-neutral-white active:bg-neutral-focus ",
+    outline: "border-2 border-neutral-rest text-neutral-default hover:border-neutral-hover hover:text-neutral-hovered active:bg-neutral-bg active:text-neutral-focused",
+    transparent: "bg-transparent text-neutral-default hover:bg-neutral-secondary active:bg-neutral-bg",
+    link: "bg-transparent text-neutral-default hover:underline active:text-neutral-focused"
   },
   success: {
     gradient: "relative bg-gradient-to-b from-success-600 to-success-800 text-white-50 hover:bg-gradient-to-b hover:from-success-500 hover:to-success-700 active:ring-1 active:ring-offset-1 active:ring-success-500 active:bg-gradient-to-b active:from-success-800 active:to-success-600 focus:bg-gradient-to-b focus:from-success-700 focus:to-success-900 align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",

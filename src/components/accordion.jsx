@@ -11,16 +11,16 @@ const sizes = {
 
 const styles = {
   primary: {
-    base: "border border-primary-500 text-primary-700",
-    expanded: "bg-aqua-50",
+    base: "border border-brand-primary-regular text-brand-primary-focused",
+    expanded: "bg-brand-primary-bg",
   },
   neutral: {
-    base: "border border-neutral-100 text-neutral-900",
-    expanded: "bg-white-500 ",
+    base: "border border-neutral-regular text-neutral-focused",
+    expanded: "bg-neutral-bg ",
   },
   transparent: {
-    base: "bg-white-50 text-black-700",
-    expanded: "bg-white-100 ",
+    base: "bg-transparent text-neutral-default",
+    expanded: "bg-neutral-secondary ",
   },
 
   // Add success, error, etc. if needed
@@ -52,7 +52,7 @@ export default function Accordion({
   return (
     <div
       className={clsx(
-        "w-full rounded-curve-md transition-all duration-200 ease-in-out",
+        "w-full rounded-curve-md transition-all duration-300 ease-in-out",
         styles[style]?.base,
         isExpanded && styles[style]?.expanded,
         className
@@ -63,7 +63,7 @@ export default function Accordion({
         onClick={toggleAccordion}
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer ",
-          isExpanded && style === "transparent" ? "border-b-2 border-b-neutral-100" : ""
+          isExpanded && style === "transparent" ? "border-b-2 border-neutral-regular" : ""
         )}
         variant={isExpanded ? "gradient" : "transparent"}
         size={size}

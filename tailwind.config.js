@@ -19,13 +19,137 @@ export default {
         'max': {max: "1536px"} // 2X large devices
       },
       colors: {
-        surface: {
-          'neutral-primary': 'var(--neutral-primary)',
-          'neutral-secondary': 'var(--neutral-secondary)',
-          'neutral-tertiary': 'var(--neutral-tertiary)',
-          'neutral-bg': 'var(--neutral-bg)',
-          'neutral-bw': 'var(--neutral-bw)',
-          'neutral-wb': 'var(--neutral-wb)',
+        neutral: {
+          //neutral surfaces and backgrounds
+          white: 'var(--neutral-white)',
+          black: 'var(--neutral-black)',
+          bw: 'var(--neutral-bw)',
+          wb: 'var(--neutral-wb)',
+          primary: 'var(--neutral-primary)',
+          secondary: 'var(--neutral-secondary)',
+          tertiary: 'var(--neutral-tertiary)',
+          bg: 'var(--neutral-bg)',
+          rest: 'var(--neutral-rest)',
+          hover: 'var(--neutral-hover)',
+          focus: 'var(--neutral-focus)',
+          //neutral text 
+          inverse: 'var(--neutral-primary)',
+          mute: 'var(--text-neutral-mute)',
+          placeholder: 'var(--text-neutral-placeholder)',
+          default: 'var(--text-neutral-secondary)',
+          hovered: 'var(--text-neutral-tertiary)',
+          focused: 'var(--text-neutral-primary)',
+          //neutral border
+          regular: 'var(--border-neutral-regular)',
+          subtle: 'var(--border-neutral-subtle)',
+          strong: 'var(--border-neutral-strong)',
+        },
+        brand: {
+          //primary surfaces and backgrounds
+          'primary-rest': 'var(--primary-rest)',
+          'primary-hover': 'var(--primary-hover)',
+          'primary-focus': 'var(--primary-focus)',
+          'primary-bg': 'var(--primary-bg)',
+          'primary-light': 'var(--primary-light)',
+          //brand primary text
+          'primary-default': 'var(--text-primary-rest)',
+          'primary-hovered': 'var(--text-primary-hover)',
+          'primary-focused': 'var(--text-primary-focus)',
+          //brand primary border
+          'primary-regular': 'var(--border-primary-regular)',
+          'primary-subtle': 'var(--border-primary-subtle)',
+          'primary-strong': 'var(--border-primary-strong)',
+
+          //secondary surfaces and backgrounds
+          'secondary-rest': 'var(--secondary-rest)',
+          'secondary-hover': 'var(--secondary-hover)',
+          'secondary-focus': 'var(--secondary-focus)',
+          'secondary-bg': 'var(--secondary-bg)',
+          'secondary-light': 'var(--secondary-light)',
+          //brand secondary text
+          'secondary-default': 'var(--text-secondary-rest)',
+          'secondary-hovered': 'var(--text-secondary-hover)',
+          'secondary-focused': 'var(--text-secondary-focus)',
+          //brand secondary border
+          'secondary-regular': 'var(--border-secondary-regular)',
+          'secondary-subtle': 'var(--border-secondary-subtle)',
+          'secondary-strong': 'var(--border-secondary-strong)',
+
+          //tertiary surfaces and backgrounds
+          'tertiary-rest': 'var(--tertiary-rest)',
+          'tertiary-hover': 'var(--tertiary-hover)',
+          'tertiary-focus': 'var(--tertiary-focus)',
+          'tertiary-bg': 'var(--tertiary-bg)',
+          'tertiary-light': 'var(--tertiary-light)',
+          //brand tertiary text
+          'tertiary-default': 'var(--text-tertiary-rest)',
+          'tertiary-hovered': 'var(--text-tertiary-hover)',
+          'tertiary-focused': 'var(--text-tertiary-focus)',
+          //brand tertiary border
+          'tertiary-regular': 'var(--border-tertiary-regular)',
+          'tertiary-subtle': 'var(--border-tertiary-subtle)',
+          'tertiary-strong': 'var(--border-tertiary-strong)',
+        },
+        semantic: {
+          //success surfaces and backgrounds
+          'success-rest': 'var(--success-rest)',
+          'success-hover': 'var(--success-hover)',
+          'success-focus': 'var(--success-focus)',
+          'success-bg': 'var(--success-bg)',
+          'success-light': 'var(--success-light)',
+          //success text
+          'success-default': 'var(--text-success-rest)',
+          'success-hovered': 'var(--text-success-hover)',
+          'success-focused': 'var(--text-success-focus)',
+          //success border
+          'success-regular': 'var(--border-success-regular)',
+          'success-subtle': 'var(--border-success-subtle)',
+          'success-strong': 'var(--border-success-strong)',
+
+          //error surfaces and backgrounds
+          'error-rest': 'var(--error-rest)',
+          'error-hover': 'var(--error-hover)',
+          'error-focus': 'var(--error-focus)',
+          'error-bg': 'var(--error-bg)',
+          'error-light': 'var(--error-light)',
+          //error text
+          'error-default': 'var(--text-error-rest)',
+          'error-hovered': 'var(--text-error-hover)',
+          'error-focused': 'var(--text-error-focus)',
+          //error border
+          'error-regular': 'var(--border-error-regular)',
+          'error-subtle': 'var(--border-error-subtle)',
+          'error-strong': 'var(--border-error-strong)',
+
+          //warning surfaces and backgrounds
+          'warning-rest': 'var(--warning-rest)',
+          'warning-hover': 'var(--warning-hover)',
+          'warning-focus': 'var(--warning-focus)',
+          'warning-bg': 'var(--warning-bg)',
+          'warning-light': 'var(--warning-light)',
+          //warning text
+          'warning-default': 'var(--text-warning-rest)',
+          'warning-hovered': 'var(--text-warning-hover)',
+          'warning-focused': 'var(--text-warning-focus)',
+          //warning border
+          'warning-regular': 'var(--border-warning-regular)',
+          'warning-subtle': 'var(--border-warning-subtle)',
+          'warning-strong': 'var(--border-warning-strong)',
+
+          //info surfaces and backgrounds
+          'info-rest': 'var(--info-rest)',
+          'info-hover': 'var(--info-hover)',
+          'info-focus': 'var(--info-focus)',
+          'info-bg': 'var(--info-bg)',
+          'info-light': 'var(--info-light)',
+          //info text
+          'info-default': 'var(--text-info-rest)',
+          'info-hovered': 'var(--text-info-hover)',
+          'info-focused': 'var(--text-info-focus)',
+          //info border
+          'info-regular': 'var(--border-info-regular)',
+          'info-subtle': 'var(--border-info-subtle)',
+          'info-strong': 'var(--border-info-strong)',
         },
         white: {
           50: '#ffffff',
@@ -53,19 +177,7 @@ export default {
           900: '#101010',
           950: '#000000',
         },
-        neutral: {
-          50: colors.stone[50],
-          100: colors.stone[100],
-          200: colors.stone[200],
-          300: colors.stone[300],
-          400: colors.stone[400],
-          500: colors.stone[500],
-          600: colors.stone[600],
-          700: colors.stone[700],
-          800: colors.stone[800],
-          900: colors.stone[900],
-          950: colors.stone[950],
-        },
+        
         primary: {
           50: colors.cyan[50],
           100: colors.cyan[100],
