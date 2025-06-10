@@ -1,7 +1,6 @@
 // src/components/sidebar.jsx
 import { useState } from "react";
 import Button from './button';
-import Dropdown from './dropdown';
 
 // Sidebar structure with parent and child sections
 const sections = [
@@ -13,10 +12,11 @@ const sections = [
     id: "basic-components",
     label: "Basic Components",
     children: [
+      { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
       { id: "alert", label: "Alert", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",}
+      
     ]
   },
   { 
