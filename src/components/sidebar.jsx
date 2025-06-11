@@ -16,7 +16,6 @@ const sections = [
       { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
       { id: "alert", label: "Alert", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      
     ]
   },
   { 

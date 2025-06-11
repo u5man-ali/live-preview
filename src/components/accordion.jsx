@@ -1,12 +1,26 @@
 // src/components/Accordion.jsx
 import clsx from "clsx";
-import Button from './button';
 import { useEffect, useState } from "react";
 
 const sizes = {
-  sm: "text-body-sm p-3",
-  md: "text-body-md p-4",
-  lg: "text-body-lg p-5",
+  sm: {
+    text: "text-body-sm",
+    padding: " p-2 ",
+    corner: "rounded-curve-sm",
+    icon: "w-4 h-4"
+  },
+  md: {
+    text: "text-body-md",
+    padding: " p-3 ",
+    corner: "rounded-curve-md",
+    icon: "w-5 h-5"
+  },
+  lg: {
+    text: "text-body-lg ",
+    padding: "p-4 ",
+    corner: "rounded-curve-lg",
+    icon: "w-6 h-6"
+  }
 };
 
 const styles = {
@@ -16,26 +30,25 @@ const styles = {
   },
   neutral: {
     base: "border border-neutral-regular text-neutral-focused",
-    expanded: "bg-neutral-bg ",
+    expanded: "bg-neutral-secondary",
   },
   transparent: {
     base: "bg-transparent text-neutral-default",
-    expanded: "bg-neutral-secondary ",
+    expanded: "bg-neutral-secondary",
   },
-
-  // Add success, error, etc. if needed
 };
 
 export default function Accordion({
   title,
   children,
-  size = "md", // "sm", "md", "lg"
-  style = "neutral", // "neutral", "primary", ...
-  iconName = "Chevron-Down-Outline", // your icons
+  size = "md",
+  style = "neutral",
+  iconName = "Chevron-Down-Outline",
   defaultExpanded = false,
   className = "",
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  const [Icon, setIcon] = useState(null);
 
   const toggleAccordion = () => setIsExpanded((prev) => !prev);
 
@@ -52,39 +65,46 @@ export default function Accordion({
   return (
     <div
       className={clsx(
-        "w-full rounded-curve-md transition-all duration-300 ease-in-out",
+        "w-full transition-all duration-300 ease-in-out",
         styles[style]?.base,
-        isExpanded && styles[style]?.expanded,
+        //isExpanded && styles[style]?.expanded,
+        sizes[size]?.text,
+        sizes[size]?.corner,
         className
       )}
     >
-      <div className={isExpanded ? "rounded-bl-0 rounded-br-0 rounded-tl-[inherit] rounded-tr-[inherit]" : "rounded-[inherit]"}>
-      <Button
+      <div
         onClick={toggleAccordion}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggleAccordion()}
         className={clsx(
-          "flex w-full items-center justify-between font-medium cursor-pointer ",
-          isExpanded && style === "transparent" ? "border-b-2 border-neutral-regular" : ""
+          "flex w-full items-center justify-between font-medium cursor-pointer focus:outline-none",
+          //(Object.values(sizes[size] || {})),
+          isExpanded ? "border-b-2 border-neutral-subtle rounded-bl-none rounded-br-none" : "",
+          isExpanded && styles[style]?.expanded,
+          sizes[size]?.padding,
+          sizes[size]?.corner,
         )}
-        variant={isExpanded ? "gradient" : "transparent"}
-        size={size}
-        style={style}
-        shape="inherit"
-        iconSize={size}
-        showLeftIcon={false}
-        iconLeftName= "Arrow-Turn-Down-Right-Outline"
-        showRightIcon={true}
-        iconRightName= {isExpanded ? "Chevron-Up-Outline" : "Chevron-Down-Outline"}
       >
         <span>{title}</span>
-      </Button>
+        {Icon && (
+          <Icon
+            className={clsx(
+              "transition-transform duration-300",
+              isExpanded ? "rotate-180" : "rotate-0",
+              sizes[size]?.icon
+            )}
+          />
+        )}
       </div>
       <div
         className={clsx(
           "overflow-hidden transition-all duration-300 ease-in-out",
-          isExpanded ? "max-h-screen " : "max-h-0 p-0"
+          isExpanded ? "max-h-screen" : "max-h-0 p-0"
         )}
       >
-        {isExpanded && <div className={`${sizes[size]} `}>{children}</div>}
+        {isExpanded && <div className={sizes[size]?.padding}>{children}</div>}
       </div>
     </div>
   );
