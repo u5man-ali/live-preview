@@ -1,6 +1,6 @@
 import Button from '../components/button'
 
-export default function buttonDemo() {
+export default function Introduction() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full flex justify-start items-center gap-4 mb-4 flex-wrap">

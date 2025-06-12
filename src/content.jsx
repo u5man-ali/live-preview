@@ -3,11 +3,13 @@ import Introduction from './pages/introduction';
 import ButtonPage from './pages/button-demo';
 import FABPage from './pages/fab-demo';
 import AccordionPage from './pages/accordion-demo';
+import TabPage from './pages/tab-demo';
 
 const componentMap = {
   introduction: Introduction,
   button: ButtonPage,
   fab: FABPage,
+  tab: TabPage,
   accordion: AccordionPage,
   // Add other components here as needed
 };

@@ -1,6 +1,6 @@
 import Accordion from '../components/accordion'
 
-export default function buttonDemo() {
+export default function AccordionDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full h-min flex justify-center items-center gap-4 mb-4 flex-wrap">

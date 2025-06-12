@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from '../components/button'
 
-export default function buttonDemo() {
+export default function ButtonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
         <div className="w-full flex justify-center items-center gap-4 mb-4 flex-wrap">

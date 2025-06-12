@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import {brandColors} from './src/styles/brand-colors'
 const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors');
 export default {

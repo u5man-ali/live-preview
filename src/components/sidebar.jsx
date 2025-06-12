@@ -14,7 +14,7 @@ const sections = [
     children: [
       { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
-      { id: "alert", label: "Alert", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "tab", label: "Tabs", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
     ]
   },
@@ -52,7 +52,12 @@ export default function Sidebar({ onSelect }) {
   };
 
   const toggleDropdown = (id) => {
-    setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
+    setExpanded(prev => {
+      if (prev[id]) {
+        return{};
+      }
+      return { [id]: true};
+    }) 
   };
 
   return (
@@ -80,7 +85,7 @@ export default function Sidebar({ onSelect }) {
                     handleSelect(section.id); // sidebar item has no children, select it directly
                   }
                 }}
-                className="justify-start"
+                className="justify-start "
               >
                 <span className="flex-1 truncate text-left">{section.label}</span>
               </Button>
@@ -100,7 +105,7 @@ export default function Sidebar({ onSelect }) {
                         iconLeftName= "Arrow-Turn-Down-Right-Outline"
                         showRightIcon={false}
                         onClick={() => handleSelect(child.id, section.id)}
-                        className="justify-start text-body-md text-left"
+                        className="justify-start text-left"
                       >
                         {child.label}
                       </Button>
