@@ -10,8 +10,7 @@ const sizes = {
 const shapes = {
   rounded: "rounded-curve-md",
   square: "rounded-none",
-  pill: "rounded-full",
-  inherit: "rounded-[inherit]"
+  pill: "rounded-pill",
 };
 const iconSizes = {
   sm: "w-4 h-4",
@@ -49,7 +48,7 @@ const styles = {
   },
   warning: {
     gradient: "relative bg-gradient-to-b from-semantic-warning-rest to-semantic-warning-focus text-neutral-white hover:bg-gradient-to-b hover:from-semantic-warning-hover hover:to-semantic-warning-rest active:ring-1 active:ring-offset-1 active:ring-semantic-warning-regular active:bg-gradient-to-b active:from-semantic-warning-focus active:to-semantic-warning-hover focus:bg-gradient-to-b focus:from-semantic-warning-hover focus:to-warning-focus align-middle select-none text-center duration-100 ease-in shadow-sm hover:shadow-md after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0px_1px_1px_1px_rgba(255,255,255,0.35),inset_0_-1px_1px_1px_rgba(0,0,0,0.25)]",
-    solid: "bg-semantic-warning-rest hover:bg-semantic-warning-hover text-nuetral-white active:bg-semantic-warning-focus ",
+    solid: "bg-semantic-warning-rest hover:bg-semantic-warning-hover text-neutral-white active:bg-semantic-warning-focus ",
     outline: "border-2 border-semantic-warning-rest text-semantic-warning-default hover:border-semantic-warning-hover hover:text-semantic-warning-hovered active:bg-semantic-warning-bg active:text-semantic-warning-focused",
     transparent: "bg-transparent text-semantic-warning-default hover:bg-semantic-warning-light active:bg-semantic-warning-bg",
     link: "bg-transparent text-semantic-warning-default hover:underline active:text-semantic-warning-focused"

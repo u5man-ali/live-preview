@@ -1,6 +1,7 @@
 // src/components/content.jsx
 import Introduction from './pages/introduction';
 import ButtonPage from './pages/button-demo';
+import BadgePage from './pages/badge-demo';
 import FABPage from './pages/fab-demo';
 import AccordionPage from './pages/accordion-demo';
 import TabPage from './pages/tab-demo';
@@ -12,7 +13,8 @@ const componentMap = {
   fab: FABPage,
   tab: TabPage,
   accordion: AccordionPage,
-  table: TablePage
+  table: TablePage,
+  badge: BadgePage
   // Add other components here as needed
 };
 
