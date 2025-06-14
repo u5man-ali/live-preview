@@ -31,7 +31,7 @@ const iconSizes = {
 
 const styles = {
   primary: {
-    filled: "bg-brand-primary-light text-brand-primary-rest border border-brand-primary-rest",
+    filled: "bg-brand-primary-light text-brand-primary-default border border-brand-primary-rest",
     outline: "text-brand-primary-rest border border-brand-primary-rest",
   },
   neutral: {
