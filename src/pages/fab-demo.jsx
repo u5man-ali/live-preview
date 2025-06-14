@@ -4,7 +4,7 @@ export default function FabDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
         <div className="w-full flex justify-center items-center gap-2 mb-4 flex-wrap">
-        <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2">Floating Action Button</h1>
+        <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">Floating Action Button</h1>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DezineCrafts Floating Action Button (FAB) is a bold, context-aware UI element designed to surface your app’s most important or high-impact actions. Built entirely with Tailwind CSS and fine-tuned for responsiveness, the FAB elevates usability in mobile-first interfaces and dashboard workflows—where quick access and visual hierarchy matter.
 With support for multiple styles, shapes, sizes, and icon placements, the button component adapts seamlessly to any UI scenario.</p>
 <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4 ">Whether launching a creation flow, triggering contextual tools, or prompting a new message, the FAB makes your intent unmistakable—without overwhelming the layout.</p>

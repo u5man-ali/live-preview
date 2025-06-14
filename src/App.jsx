@@ -64,7 +64,7 @@ function App() {
             ></div>
           )}
           {/* Sidebar block: show if open on mobile, always show on large screens */}
-          <div className={`fixed lg:static z-30 top-[68px] left-0 h-screen-full w-60 shrink-0 bg-neutral-tertiary border-r border-neutral-regular transition-transform duration-300 ease-in-out
+          <div className={`fixed lg:sticky top-[54px] sm:top-[80px] z-30 self-start left-0 h-[calc(100vh-54px)] sm:h-[calc(100vh-80px)] w-60 shrink-0 bg-neutral-tertiary border-r border-neutral-regular transition-transform duration-300 ease-in-out
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:block`}
           >
             {/*Sidebar imported from /components/sidebar.jsx*/}

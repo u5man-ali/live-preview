@@ -13,9 +13,10 @@ const sections = [
     label: "Basic Components",
     children: [
       { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
       { id: "tab", label: "Tabs", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "input", label: "Form Inputs", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
     ]
   },
   { 
@@ -23,7 +24,7 @@ const sections = [
     label: "Building Blocks",
     children: [
       { id: "accordion", label: "Accrodion", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "input", label: "Input", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "table", label: "Table", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "dropdown", label: "Dropdown", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
       { id: "breadcrumb", label: "Breadcrumb", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",}
     ]
@@ -61,7 +62,7 @@ export default function Sidebar({ onSelect }) {
   };
 
   return (
-    <aside className="h-screen w-full overflow-y-auto px-4 py-6">
+    <aside className="w-full overflow-y-auto px-4 py-6">
       <nav className="flex flex-col gap-1">
         {sections.map((section) => {
           const isExpanded = expanded[section.id] || section.children?.some(child => child.id === active);

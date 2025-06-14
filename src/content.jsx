@@ -4,6 +4,7 @@ import ButtonPage from './pages/button-demo';
 import FABPage from './pages/fab-demo';
 import AccordionPage from './pages/accordion-demo';
 import TabPage from './pages/tab-demo';
+import TablePage from './pages/table-demo';
 
 const componentMap = {
   introduction: Introduction,
@@ -11,6 +12,7 @@ const componentMap = {
   fab: FABPage,
   tab: TabPage,
   accordion: AccordionPage,
+  table: TablePage
   // Add other components here as needed
 };
 
