@@ -1,6 +1,7 @@
 // src/components/Accordion.jsx
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import chevronDown from '../icons/Chevron-Down-Outline.svg?react'
 
 const sizes = {
   sm: {
@@ -43,24 +44,13 @@ export default function Accordion({
   children,
   size = "md",
   style = "neutral",
-  iconName = "Chevron-Down-Outline",
+  icon = chevronDown,
   defaultExpanded = false,
   className = "",
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const [Icon, setIcon] = useState(null);
-
+  const Icon = icon? icon : null;
   const toggleAccordion = () => setIsExpanded((prev) => !prev);
-
-  useEffect(() => {
-    if (iconName) {
-      import(`../icons/${iconName}.svg?react`)
-        .then((icon) => setIcon(() => icon.default))
-        .catch((error) =>
-          console.error(`Error loading icon '${iconName}':`, error)
-        );
-    }
-  }, [iconName]);
 
   return (
     <div

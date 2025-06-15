@@ -5,6 +5,9 @@ import Content from './content'
 import Button from './components/button';
 import FAB from './components/fab';
 
+import hamburger from './icons/Navigation-Filled.svg?react'
+import sun from './icons/Weather-Sunny-Outline.svg?react'
+import moon from './icons/Weather-Moon-Outline.svg?react'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('introduction');
@@ -34,7 +37,7 @@ function App() {
           shape="rounded"
           iconSize="sm"
           className="lg:hidden"
-          iconName="Navigation-Filled"
+          icon={hamburger}
           onClick={toggleSidebar}
           >
             {/* this button has not text label, only left icon */}
@@ -47,9 +50,7 @@ function App() {
           style="primary"
           shape="pill"
           iconSize="sm"
-          showLeftIcon={true}
-          showRightIcon={false}
-          iconLeftName={theme == 'dark' ? "Weather-Sunny-Outline": "Weather-Moon-Outline"}
+          iconLeft={theme == 'dark' ? sun: moon}
           onClick={toggleTheme}
         >
           {theme === 'dark' ? 'Go Bright': 'Go Dark'}

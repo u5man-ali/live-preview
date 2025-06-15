@@ -1,6 +1,5 @@
 // src/components/Button.jsx
 import clsx from "clsx";
-import { useEffect, useState } from "react";
 
 const sizes = {
   sm: "text-body-sm px-3 py-1.5",
@@ -71,10 +70,8 @@ export default function Button({
   iconSize = "md", // "sm", "md", or "lg"
   className = "",
   disabled = false,
-  showLeftIcon = true,
-  iconLeftName = "Placeholder-Outline", // check filenames to use other icons in src/icons
-  showRightIcon = true,
-  iconRightName = "Arrow-Enter-Left-Outline", // check filenames to use other icons in src/icons
+  iconLeft = null,
+  iconRight = null,
   ...props
 }) {
   const baseClasses = "inline-flex items-center gap-2 font-medium transition-all whitespace-nowrap";
@@ -82,23 +79,9 @@ export default function Button({
   const sizeClass = sizes[size];
   const shapeClass = shapes[shape];
   const variantClass = styles[style]?.[variant] ?? "";
-  const [LeftIcon, setLeftIcon] = useState(null);
-  const [RightIcon, setRightIcon] = useState(null);
+  const LeftIcon = iconLeft? iconLeft: null;
+  const RightIcon = iconRight? iconRight: null;
   
-  useEffect(
-    () => {
-      if(showLeftIcon && iconLeftName) {
-        import(`../icons/${iconLeftName}.svg?react`)
-        .then((icon) => setLeftIcon(() => icon.default))
-        .catch((error) => console.error(`Error loading left icon: ${error}`));
-      }
-      if(showRightIcon && iconRightName) {
-        import(`../icons/${iconRightName}.svg?react`)
-        .then((icon) => setRightIcon(() => icon.default))
-        .catch((error) => console.error(`Error loading right icon: ${error}`));
-      }
-    }, [showLeftIcon, iconLeftName, showRightIcon, iconRightName]
-  );
   return (
       <button
         className={clsx(
@@ -112,9 +95,9 @@ export default function Button({
         disabled={disabled}
         {...props}
       >
-        {showLeftIcon && LeftIcon && <LeftIcon className={iconSizes[iconSize]} /> }
+        {LeftIcon && <LeftIcon className={iconSizes[iconSize]} /> }
         {children}
-        {showRightIcon && RightIcon && <RightIcon className={iconSizes[iconSize]} /> }
+        {RightIcon && <RightIcon className={iconSizes[iconSize]} /> }
       </button>
   );
 }

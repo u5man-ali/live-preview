@@ -1,6 +1,9 @@
 // src/components/sidebar.jsx
 import { useState } from "react";
 import Button from './button';
+import arrowDownRight from '../icons/Arrow-Turn-Down-Right-Outline.svg?react'
+import chevronUp from '../icons/Chevron-Up-Outline.svg?react'
+import chevronDown from '../icons/Chevron-Down-Outline.svg?react'
 
 // Sidebar structure with parent and child sections
 const sections = [
@@ -12,12 +15,12 @@ const sections = [
     id: "basic-components",
     label: "Basic Components",
     children: [
-      { id: "button", label: "Button", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "badge", label: "Badge", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "fab", label: "FAB", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline"},
-      { id: "tab", label: "Tabs", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "accordion", label: "Accrodion", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "input", label: "Form Inputs", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "button", label: "Button", },
+      { id: "badge", label: "Badge", },
+      { id: "fab", label: "FAB", },
+      { id: "tab", label: "Tabs", },
+      { id: "accordion", label: "Accrodion", },
+      { id: "input", label: "Form Inputs", },
     ]
   },
   { 
@@ -25,16 +28,16 @@ const sections = [
     label: "Building Blocks",
     children: [
       
-      { id: "table", label: "Table", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "dropdown", label: "Dropdown", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
-      { id: "breadcrumb", label: "Breadcrumb", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",}
+      { id: "table", label: "Table", },
+      { id: "dropdown", label: "Dropdown", },
+      { id: "breadcrumb", label: "Breadcrumb", }
     ]
   },
   { 
     id: "ui-blocks",
     label: "UI Blocks",
     children: [
-      { id: "datepicker", label: "Date Picker", showLeftIcon: true, iconLeftName: "Arrow-Turn-Down-Right-Outline",},
+      { id: "datepicker", label: "Date Picker", },
     ]
   },
 ];
@@ -76,10 +79,8 @@ export default function Sidebar({ onSelect }) {
                 style={isActive ? "primary" : isExpanded ? "primary" : "secondary"}
                 shape="rounded"
                 iconSize="md"
-                showLeftIcon={!!section.iconLeftName}
-                showRightIcon={!!section.children}
-                iconLeftName={section.iconLeftName}
-                iconRightName={section.children ? (isExpanded ? "Chevron-Up-Outline" : "Chevron-Down-Outline") : null}
+                iconLeft={null}
+                iconRight={section.children ? (isExpanded ? chevronUp : chevronDown) : null}
                 onClick={() => {
                   if (section.children) {
                     toggleDropdown(section.id); // sidebar item has children, toggle dropdown
@@ -103,9 +104,7 @@ export default function Sidebar({ onSelect }) {
                         style={active === child.id ? "primary" : "secondary"}
                         shape="rounded"
                         iconSize="sm"
-                        showLeftIcon={true}
-                        iconLeftName= "Arrow-Turn-Down-Right-Outline"
-                        showRightIcon={false}
+                        iconLeft= {arrowDownRight}
                         onClick={() => handleSelect(child.id, section.id)}
                         className="justify-start text-left"
                       >

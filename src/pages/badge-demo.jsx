@@ -1,5 +1,8 @@
 import { useState } from "react";
-import Badge from '../components/badge'
+import Badge from '../components/badge';
+
+import PlaceholderOutline from '../icons/Placeholder-Outline.svg?react'
+import CircleSmallFilled from '../icons/Circle-Small-Filled.svg?react'
 
 export default function BadgeDemo() {
   return (
@@ -19,27 +22,12 @@ export default function BadgeDemo() {
           shape="pill"
           iconSize="md"
           disabled={false}
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft=""
-          iconRight=""
+          iconLeft={CircleSmallFilled}
+          iconRight={null}
           >
-          Primary Badge
+          Primary Filled
           </Badge>
-          <Badge
-          size="md"
-          style="neutral"
-          variant="outline"
-          shape="pill"
-          iconSize="md"
-          disabled={false}
-          showLeftIcon={true}
-          showRightIcon={true}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
-          >
-          Neutral Badge
-          </Badge>
+
         </div>
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Badge Style Variations</h3>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">DC Badge supports a rich set of visual styles to suit different interaction goals:</p>
@@ -57,10 +45,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Gradient Badge
           </Badge>
@@ -70,10 +54,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Solid Badge
           </Badge>
@@ -83,10 +63,6 @@ export default function BadgeDemo() {
           variant="outline"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Outline Badge
           </Badge>
@@ -96,10 +72,6 @@ export default function BadgeDemo() {
           variant="transparent"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Transparent Badge
           </Badge>
@@ -109,10 +81,6 @@ export default function BadgeDemo() {
           variant="link"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Hyperlink
           </Badge>
@@ -142,10 +110,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Primary Brand Color
           </Badge>
@@ -155,10 +119,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Secondary Color
           </Badge>
@@ -168,10 +128,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Success Color
           </Badge>
@@ -181,10 +137,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Error Color
           </Badge>
@@ -194,10 +146,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Warning Color
           </Badge>
@@ -207,10 +155,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Info Color
           </Badge>
@@ -229,10 +173,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Rounded Corners
           </Badge>
@@ -242,10 +182,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="square"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Square Badge
           </Badge>
@@ -255,10 +191,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="pill"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Circular Pill
           </Badge>
@@ -277,10 +209,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="sm"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Small Badge
           </Badge>
@@ -290,10 +218,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Medium Badge
           </Badge>
@@ -303,10 +227,6 @@ export default function BadgeDemo() {
           variant="filled"
           shape="rounded"
           iconSize="lg"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeft="Placeholder-Outline"
-          iconRight="Placeholder-Filled"
           >
           Large Badge
           </Badge>

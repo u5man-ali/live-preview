@@ -1,6 +1,11 @@
 import { useState } from "react";
 import Button from '../components/button'
 
+import chevronRight from '../icons/Chevron-Right-Outline.svg?react'
+import book from '../icons/Book-Default-Filled.svg?react'
+import cloudUpload from '../icons/Cloud-Arrow-Up-Outline.svg?react'
+import google from '../icons/google.svg?react'
+
 export default function ButtonDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
@@ -19,10 +24,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Basic Button
           </Button>
@@ -33,10 +34,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={true}
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Disabled Button
           </Button>
@@ -57,10 +54,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Gradient Button
           </Button>
@@ -70,10 +63,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="solid"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Solid Button
           </Button>
@@ -83,10 +72,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="outline"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Outline Button
           </Button>
@@ -96,10 +81,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="transparent"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Transparent Button
           </Button>
@@ -109,10 +90,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="link"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Hyperlink
           </Button>
@@ -132,10 +109,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="link"
           shape="rounded"
           iconSize="sm"
-          showLeftIcon={false}
-          showRightIcon={true}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Chevron-Right-Outline"
+          iconRight={chevronRight}
           >
           Learn More
           </Button>
@@ -145,10 +119,8 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={true}
-          iconLeftName="Book-Default-Filled"
-          iconRightName="Chevron-Right-Outline"
+          iconLeft={book}
+          iconRight={chevronRight}
           >
           Read Documentation
           </Button>
@@ -158,10 +130,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="outline"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={false}
-          iconLeftName="Cloud-Arrow-Up-Outline"
-          iconRightName="Placeholder-Filled"
+          iconLeft={cloudUpload}
           >
           Upload Files
           </Button>
@@ -171,10 +140,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="outline"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={true}
-          showRightIcon={false}
-          iconLeftName="google"
-          iconRightName="Placeholder-Filled"
+          iconLeft={google}
           >
           Continue with Google
           </Button>
@@ -196,10 +162,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Primary Brand Color
           </Button>
@@ -209,10 +171,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Secondary Color
           </Button>
@@ -222,10 +180,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Success Color
           </Button>
@@ -235,10 +189,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Error Color
           </Button>
@@ -248,10 +198,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Warning Color
           </Button>
@@ -261,10 +207,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Info Color
           </Button>
@@ -283,10 +225,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Rounded Corners
           </Button>
@@ -296,10 +234,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="square"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Square Button
           </Button>
@@ -309,10 +243,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="pill"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Circular Pill
           </Button>
@@ -331,10 +261,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="sm"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Small Button
           </Button>
@@ -344,10 +270,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="md"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Medium Button
           </Button>
@@ -357,10 +279,6 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           variant="gradient"
           shape="rounded"
           iconSize="lg"
-          showLeftIcon={false}
-          showRightIcon={false}
-          iconLeftName="Placeholder-Outline"
-          iconRightName="Placeholder-Filled"
           >
           Large Button
           </Button>

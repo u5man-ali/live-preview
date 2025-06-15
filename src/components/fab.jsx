@@ -71,7 +71,7 @@ export default function FAB({
   iconSize = "md", // "sm", "md", or "lg"
   className = "",
   disabled = false,
-  iconName = "Placeholder-Outline", // check filenames to use other icons in src/icons
+  icon = null,
   ...props
 }) {
   const baseClasses = "inline-flex items-center gap-2 font-medium transition-all whitespace-nowrap";
@@ -79,17 +79,8 @@ export default function FAB({
   const sizeClass = sizes[size];
   const shapeClass = shapes[shape];
   const variantClass = styles[style]?.[variant] ?? "";
-  const [Icon, setIcon] = useState(null);
+  const Icon = icon? icon: null;
   
-  useEffect(
-    () => {
-      if(iconName) {
-        import(`../icons/${iconName}.svg?react`)
-        .then((icon) => setIcon(() => icon.default))
-        .catch((error) => console.error(`Error loading icon: ${error}`));
-      }
-    }, [iconName]
-  );
   return (
       <button
         className={clsx(

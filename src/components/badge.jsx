@@ -1,16 +1,6 @@
 // src/components/badge.jsx
 import clsx from "clsx";
 
-import PlaceholderOutline from '../icons/Placeholder-Outline.svg?react';
-import ArrowEnterLeftOutline from '../icons/Arrow-Enter-Left-Outline.svg?react';
-import PlaceholderFilled from '../icons/Placeholder-Filled.svg?react';
-
-const IconMap = {
-  "Placeholder-Outline": PlaceholderOutline,
-  "Arrow-Enter-Left-Outline": ArrowEnterLeftOutline,
-  "Placeholder-Filled": PlaceholderFilled,
-};
-
 const sizes = {
   sm: "text-body-xs leading-[16px] px-2 py-1",
   md: "text-body-sm leading-[20px] px-2 py-1",
@@ -31,12 +21,12 @@ const iconSizes = {
 
 const styles = {
   primary: {
-    filled: "bg-brand-primary-light text-brand-primary-default border border-brand-primary-rest",
-    outline: "text-brand-primary-rest border border-brand-primary-rest",
+    filled: "bg-brand-primary-light text-brand-primary-default border-2 border-brand-primary-rest",
+    outline: "text-brand-primary-hover border-2 border-brand-primary-hover",
   },
   neutral: {
-    filled: "bg-neutral-tertiary text-neutral-default border border-neutral-default",
-    outline: "text-neutral-default border border-neutral-default",
+    filled: "bg-neutral-secondary text-neutral-hovered border-2 border-neutral-placeholder",
+    outline: "text-neutral-placeholder border-2 border-neutral-placeholder",
   },
   success: {
     filled: "bg-semantic-success-light text-semantic-success-rest border border-semantic-success-rest",
@@ -65,10 +55,8 @@ export default function Badge({
   iconSize = "md", // "sm", "md", or "lg"
   className = "",
   disabled = false,
-  showLeftIcon = true,
-  iconLeft = "Placeholder-Outline",
-  showRightIcon = true,
-  iconRight = "Arrow-Enter-Left-Outline",
+  iconLeft = null, //default is null, can obtain pre-imported svg icons as react component
+  iconRight = null, //default is null, can obtain pre-imported svg icons as react component
   ...props
 }) {
   const baseClasses = "inline-flex items-center gap-2 font-medium transition-all whitespace-nowrap";
@@ -76,13 +64,13 @@ export default function Badge({
   const sizeClass = sizes[size];
   const shapeClass = shapes[shape];
   const variantClass = styles[style]?.[variant] ?? "";
-
-  const LeftIcon = showLeftIcon && IconMap[iconLeft] ? IconMap[iconLeft] : null;
-  const RightIcon = showRightIcon && IconMap[iconRight] ? IconMap[iconRight] : null;
+  const LeftIcon = iconLeft? iconLeft: null;
+  const RightIcon = iconRight? iconRight: null;
 
   return (
     <span
       className={clsx(
+        className="px-3",
         baseClasses,
         sizeClass,
         shapeClass,
@@ -93,7 +81,7 @@ export default function Badge({
       {...props}
     >
       {LeftIcon && <LeftIcon className={iconSizes[iconSize]} />}
-      {children}
+      {children }
       {RightIcon && <RightIcon className={iconSizes[iconSize]} />}
     </span>
   );

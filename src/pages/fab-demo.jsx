@@ -1,4 +1,5 @@
 import FAB from '../components/fab'
+import placeholder from '../icons/Placeholder-Outline.svg?react'
 
 export default function FabDemo() {
   return (
@@ -17,7 +18,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Disabled FAB
@@ -28,7 +29,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={true}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
         </div>
@@ -50,7 +51,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Solid FAB
@@ -61,7 +62,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Outline FAB
@@ -72,7 +73,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Transparent FAB
@@ -83,7 +84,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
         </div>
@@ -99,7 +100,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Secondary FAB
@@ -110,7 +111,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Success FAB
@@ -121,7 +122,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Error FAB
@@ -132,7 +133,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Warning FAB
@@ -143,7 +144,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Info FAB
@@ -154,7 +155,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
         </div>
@@ -169,7 +170,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Square Corners
@@ -180,7 +181,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="square"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Circular Pill
@@ -191,7 +192,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="pill"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
         </div>
@@ -206,7 +207,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="sm"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Medium FAB
@@ -217,7 +218,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="md"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
           Large FAB
@@ -228,7 +229,7 @@ With support for multiple styles, shapes, sizes, and icon placements, the button
           shape="rounded"
           iconSize="lg"
           disabled={false}
-          iconName="Placeholder-Outline"
+          icon={placeholder}
           >
           </FAB>
         </div>
