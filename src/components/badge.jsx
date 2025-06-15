@@ -70,7 +70,7 @@ export default function Badge({
   return (
     <span
       className={clsx(
-        className="px-3",
+        className="px-2",
         baseClasses,
         sizeClass,
         shapeClass,

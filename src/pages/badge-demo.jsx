@@ -1,36 +1,34 @@
 import { useState } from "react";
 import Badge from '../components/badge';
 
-import PlaceholderOutline from '../icons/Placeholder-Outline.svg?react'
 import CircleSmallFilled from '../icons/Circle-Small-Filled.svg?react'
+import Dismiss from '../icons/Dismiss-Filled.svg?react'
 
 export default function BadgeDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
         <div className="w-full flex justify-center items-start gap-2 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">DC Badge Component</h1>
-        <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DC Badge is a versatile, fully responsive UI element crafted with Tailwind CSS, ideal for building modern interfaces that demand clarity and performance. Whether you're designing a compelling call-to-action, form submission flow, or navigation control, this component delivers flexibility, consistency, and polish across devices and use cases.
-        With support for multiple styles, shapes, sizes, and icon placements, the badge component adapts seamlessly to any UI scenario.</p>
-        <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4 ">Explore the variations below to understand its full potential and how you can integrate it effortlessly into your Tailwind-based projects.</p>
+        <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DC Badge is a flexible, fully responsive UI element built with Tailwind CSS, designed for modern interfaces that prioritize usability and visual consistency. Whether you're enhancing a call-to-action, guiding a form submission, or improving navigation clarity, this component provides adaptable styling, seamless responsiveness, and consistent behavior across devices. With support for various styles, sizes, shapes, and icon placements, the badge integrates smoothly into any design system.</p>
+        <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4 ">Explore the options below to see how easily the DC Badge fits into your Tailwind-powered workflows.</p>
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Badge</h3>
-        <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4">This is the foundational version of the DC Badge, featuring a clean layout with a primary color palette and a subtle gradient style along with it's disabled (muted) version. Interactive states like hover and active transitions provide smooth feedback to enhance user experience. It’s perfect for general use across dashboards, forms, and utility actions.</p>
+        <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4">This is the base version of the DC Badge. It features a sleek layout, a primary color scheme, and an elegant gradient effect, along with a muted, disabled version for non-interactive states. Smooth hover and active animations enhance the interaction experience. This version is suitable for dashboards, toolbars, forms, and more.</p>
         <div className="w-full border border-neutral-regular rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4 mb-4">
           <Badge
           size="md"
           style="primary"
           variant="filled"
-          shape="pill"
+          shape="rounded"
           iconSize="md"
           disabled={false}
           iconLeft={CircleSmallFilled}
-          iconRight={null}
+          iconRight={Dismiss}
           >
           Primary Filled
           </Badge>
-
         </div>
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Badge Style Variations</h3>
-        <p className="w-full h-min text-body-md text-neutral-hovered font-normal">DC Badge supports a rich set of visual styles to suit different interaction goals:</p>
+        <p className="w-full h-min text-body-md text-neutral-hovered font-normal">DC Badge includes a variety of visual styles to match different interaction needs:</p>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">
         💠 <strong>Solid:</strong> For high-emphasis actions like primary CTAs.<br></br>
         💠 <strong>Gradient:</strong> Adds a dynamic visual flair, ideal for modern UIs.<br></br>
