@@ -21,28 +21,28 @@ const iconSizes = {
 
 const styles = {
   primary: {
-    filled: "bg-brand-primary-light text-brand-primary-default border-2 border-brand-primary-rest",
-    outline: "text-brand-primary-hover border-2 border-brand-primary-hover",
+    filled: "bg-brand-primary-light text-brand-primary-default border border-brand-primary-default",
+    outline: "text-brand-primary-rest border border-brand-primary-hover",
   },
   neutral: {
-    filled: "bg-neutral-secondary text-neutral-hovered border-2 border-neutral-placeholder",
-    outline: "text-neutral-placeholder border-2 border-neutral-placeholder",
+    filled: "bg-neutral-secondary text-neutral-hovered border border-neutral-placeholder",
+    outline: "text-neutral-placeholder border border-neutral-hover",
   },
   success: {
-    filled: "bg-semantic-success-light text-semantic-success-rest border border-semantic-success-rest",
-    outline: "text-semantic-success-rest border border-semantic-success-rest",
+    filled: "bg-semantic-success-light text-semantic-success-default border border-semantic-success-regular",
+    outline: "text-semantic-success-rest border border-semantic-success-hover",
   },
   error: {
-    filled: "bg-semantic-error-light text-semantic-error-rest border border-semantic-error-rest",
-    outline: "text-semantic-error-rest border border-semantic-error-rest",
+    filled: "bg-semantic-error-light text-semantic-error-default border border-semantic-error-regular",
+    outline: "text-semantic-error-rest border border-semantic-error-hover",
   },
   warning: {
-    filled: "bg-semantic-warning-light text-semantic-warning-rest border border-semantic-warning-rest",
-    outline: "text-semantic-warning-rest border border-semantic-warning-rest",
+    filled: "bg-semantic-warning-light text-semantic-warning-default border border-semantic-warning-regular",
+    outline: "text-semantic-warning-rest border border-semantic-warning-hover",
   },
   info: {
-    filled: "bg-semantic-info-light text-semantic-info-rest border border-semantic-info-rest",
-    outline: "text-semantic-info-rest border border-semantic-info-rest",
+    filled: "bg-semantic-info-light text-semantic-info-default border border-semantic-info-regular",
+    outline: "text-semantic-info-hover border border-semantic-info-hover",
   },
 };
 

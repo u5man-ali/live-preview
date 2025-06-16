@@ -18,7 +18,7 @@ export default function BadgeDemo() {
           size="md"
           style="primary"
           variant="filled"
-          shape="rounded"
+          shape="pill"
           iconSize="md"
           disabled={false}
           iconLeft={CircleSmallFilled}
@@ -37,52 +37,120 @@ export default function BadgeDemo() {
         💠 <strong>Hyperlink:</strong> Styled like a traditional link but with badge functionality for seamless integration in content-rich areas.</p>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4">Each style is built with consistency and accessibility in mind, ensuring that your design remains clean and intuitive.</p>
         <div className="w-full border border-neutral-regular rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4 mb-4">
-          <Badge
-          size="md"
-          style="primary"
-          variant="filled"
-          shape="rounded"
-          iconSize="md"
-          >
-          Gradient Badge
-          </Badge>
-          <Badge
-          size="md"
-          style="primary"
-          variant="filled"
-          shape="rounded"
-          iconSize="md"
-          >
-          Solid Badge
-          </Badge>
-          <Badge
-          size="md"
-          style="primary"
-          variant="outline"
-          shape="rounded"
-          iconSize="md"
-          >
-          Outline Badge
-          </Badge>
-          <Badge
-          size="md"
-          style="primary"
-          variant="transparent"
-          shape="rounded"
-          iconSize="md"
-          >
-          Transparent Badge
-          </Badge>
-          <Badge
-          size="md"
-          style="primary"
-          variant="link"
-          shape="rounded"
-          iconSize="md"
-          >
-          Hyperlink
-          </Badge>
+          <div className="flex gap-4">
+            <Badge
+            size="md"
+            style="primary"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Gradient Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="neutral"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Solid Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="success"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Outline Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="error"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Transparent Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="warning"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Hyperlink
+            </Badge>
+            <Badge
+            size="md"
+            style="info"
+            variant="filled"
+            shape="rounded"
+            iconSize="md"
+            >
+            Hyperlink
+            </Badge>
+          </div>
+          <div className="flex gap-4">
+            <Badge
+            size="md"
+            style="primary"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Gradient Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="neutral"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Solid Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="success"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Outline Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="error"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Transparent Badge
+            </Badge>
+            <Badge
+            size="md"
+            style="warning"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Hyperlink
+            </Badge>
+            <Badge
+            size="md"
+            style="info"
+            variant="outline"
+            shape="rounded"
+            iconSize="md"
+            >
+            Hyperlink
+            </Badge>
+          </div>
         </div>
+        
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Badges With Icons</h3>
         <p className="w-full h-min text-body-md text-neutral-default font-normal">Badges can include left or right icons, enhancing clarity and visual meaning. Common examples include:</p>
         <p className="w-full h-min text-body-md text-neutral-default font-normal">
