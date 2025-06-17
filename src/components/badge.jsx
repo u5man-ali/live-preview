@@ -4,12 +4,11 @@ import clsx from "clsx";
 const sizes = {
   sm: "text-body-xs leading-[16px] px-2 py-1",
   md: "text-body-sm leading-[20px] px-2 py-1",
-  lg: "text-body-md leading-[24px] px-2 py-1",
+  lg: "text-body-md leading-[24px] px-3 py-1",
 };
 
 const shapes = {
   rounded: "rounded-curve-xs",
-  square: "rounded-none",
   pill: "rounded-pill",
 };
 
@@ -26,7 +25,7 @@ const styles = {
   },
   neutral: {
     filled: "bg-neutral-secondary text-neutral-hovered border border-neutral-placeholder",
-    outline: "text-neutral-placeholder border border-neutral-hover",
+    outline: "text-neutral-hovered border border-neutral-hover",
   },
   success: {
     filled: "bg-semantic-success-light text-semantic-success-default border border-semantic-success-regular",
