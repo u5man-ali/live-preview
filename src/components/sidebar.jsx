@@ -49,11 +49,6 @@ export default function Sidebar({ onSelect }) {
   const handleSelect = (id, parentId = null) => {
     setActive(id);
     onSelect(id);
-
-    // If parentId is passed, ensure dropdown is expanded
-    //if (parentId) {
-      //setExpanded(prev => ({ ...prev, [parentId]: true }));
-    //}
   };
 
   const toggleDropdown = (id) => {

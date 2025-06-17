@@ -27,7 +27,7 @@ const sizes = {
 const styles = {
   primary: {
     base: "border border-brand-primary-regular text-brand-primary-focused",
-    expanded: "bg-brand-primary-bg",
+    expanded: "bg-brand-primary-rest text-neutral-white ",
   },
   neutral: {
     base: "border border-neutral-regular text-neutral-focused",
@@ -55,7 +55,7 @@ export default function Accordion({
   return (
     <div
       className={clsx(
-        "w-full transition-all duration-300 ease-in-out",
+        "w-full transition-all ease-in-out",
         styles[style]?.base,
         //isExpanded && styles[style]?.expanded,
         sizes[size]?.text,
@@ -71,7 +71,7 @@ export default function Accordion({
         className={clsx(
           "flex w-full items-center justify-between font-medium cursor-pointer focus:outline-none",
           //(Object.values(sizes[size] || {})),
-          isExpanded ? "border-b-2 border-neutral-subtle rounded-bl-none rounded-br-none" : "",
+          isExpanded ? "border-2 border-neutral-subtle rounded-bl-none rounded-br-none" : "",
           isExpanded && styles[style]?.expanded,
           sizes[size]?.padding,
           sizes[size]?.corner,
@@ -81,7 +81,7 @@ export default function Accordion({
         {Icon && (
           <Icon
             className={clsx(
-              "transition-transform duration-300",
+              "transition-transform duration-700",
               isExpanded ? "rotate-180" : "rotate-0",
               sizes[size]?.icon
             )}
@@ -90,7 +90,7 @@ export default function Accordion({
       </div>
       <div
         className={clsx(
-          "overflow-hidden transition-all duration-300 ease-in-out",
+          "overflow-hidden transition-all duration-700",
           isExpanded ? "max-h-screen" : "max-h-0 p-0"
         )}
       >
