@@ -192,8 +192,8 @@
     --text-neutral-secondary: theme('colors.stone.100'); /*body text, also used in rest/default state elements*/
     --text-neutral-tertiary: theme('colors.stone.200'); /*sub-text, sub-headings, also used in hovered state elements */
     /*--text-neutral-inverse: variable from Figma is served by --neutral-primary*/
-    --text-neutral-mute: theme('colors.stone.400'); /*muted text */
-    --text-neutral-placeholder: theme('colors.stone.500'); /*placeholder text for forms, inputs and other uses*/
+    --text-neutral-mute: theme('colors.stone.500'); /*muted text */
+    --text-neutral-placeholder: theme('colors.stone.400'); /*placeholder text for forms, inputs and other uses*/
 
     --text-primary-rest: theme('colors.cyan.100'); /*component fill for the rest state mostly buttons*/
     --text-primary-hover: theme('colors.cyan.200'); /*component fill for the hover state mostly buttons*/

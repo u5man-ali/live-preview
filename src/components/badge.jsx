@@ -24,7 +24,7 @@ const styles = {
     outline: "text-brand-primary-rest border border-brand-primary-hover",
   },
   neutral: {
-    filled: "bg-neutral-secondary text-neutral-hovered border border-neutral-placeholder",
+    filled: "bg-neutral-tertiary text-neutral-placeholder border border-neutral-regular",
     outline: "text-neutral-hovered border border-neutral-hover",
   },
   success: {
