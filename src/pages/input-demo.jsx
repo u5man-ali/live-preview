@@ -21,7 +21,6 @@ export default function InputDemo() {
                 placeholder="Search something..."
                 hint="Type at least 3 characters."
                 />
-
                 <Input
                 id="feedback"
                 label="Feedback"
@@ -32,7 +31,6 @@ export default function InputDemo() {
                 placeholder="Write your thoughts here..."
                 className="max-w-md"
                 />
-
                 <Input
                 id="email"
                 label="Email"
