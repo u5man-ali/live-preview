@@ -31,11 +31,11 @@ const styles = {
   },
   neutral: {
     base: "border border-neutral-regular text-neutral-focused",
-    expanded: "bg-neutral-secondary",
+    expanded: "bg-neutral-rest text-neutral-white",
   },
   transparent: {
     base: "bg-transparent text-neutral-default",
-    expanded: "bg-neutral-secondary",
+    expanded: "bg-neutral-tertiary",
   },
 };
 
