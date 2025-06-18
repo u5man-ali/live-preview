@@ -26,33 +26,33 @@ export default function AccordionDemo() {
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Accordion Variations</h3>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal mb-4">There are several variations based on sizes and styles using neutral as well as brand colors to suit varying densities of content and layout needs. The accordion sizes can be configured to adopt the responsive behavior, becoming smaller on small screens as required. All variants are fully optimized for all screen sizes.</p>
         <div className="w-full border border-neutral-regular rounded-curve-xl justify-center items-center px-6 py-8 flex flex-wrap gap-4 mb-4">
-          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal mb-4">Small Accordion</p>
+          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal ">Small Accordion with Neutral Style</p>
           <Accordion
           title="Expand to see the variant details for this accordion"
           style="neutral"
           size="sm"
           iconName="Chevron-Down-Outline"
-          className="max-w-md"
+          className="max-w-sm mb-4"
           >
             This variant has neutral style applied and is small in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
-          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal mb-4">Medium Accordion</p>
+          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal ">Medium Accordion with Brand Colors</p>
           <Accordion
           title="Expand to see the variant details for this accordion"
           style="primary"
           size="md"
           iconName="Chevron-Down-Outline"
-          className="max-w-md"
+          className="max-w-xl mb-4"
           >
             This variant has primary style applied and is medium in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
-          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal mb-4">Large Accordion</p>
+          <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal ">Large Transparent Accordion</p>
           <Accordion
           title="Expand to see the variant details for this accordion"
           style="transparent"
           size="lg"
           iconName="Chevron-Down-Outline"
-          className="max-w-md"
+          className="max-w-full mb-4"
           >
             This variant has primary style applied and is medium in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
