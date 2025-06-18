@@ -6,6 +6,7 @@ import FABPage from './pages/fab-demo';
 import AccordionPage from './pages/accordion-demo';
 import TabPage from './pages/tab-demo';
 import TablePage from './pages/table-demo';
+import InputPage from './pages/input-demo';
 
 const componentMap = {
   introduction: Introduction,
@@ -14,7 +15,8 @@ const componentMap = {
   tab: TabPage,
   accordion: AccordionPage,
   table: TablePage,
-  badge: BadgePage
+  badge: BadgePage,
+  input: InputPage,
   // Add other components here as needed
 };
 

@@ -17,7 +17,7 @@ export default function AccordionDemo() {
           style="primary"
           size="sm"
           iconName="Chevron-Down-Outline"
-          className="max-w-[500px]"
+          className="max-w-md"
           >
             DezineCrafts UI Kit is a modern, Tailwind CSS–based design system that provides reusable and customizable components like buttons, dropdowns, forms, and layout blocks to help developers and designers build beautiful web interfaces faster.
           </Accordion>
@@ -32,9 +32,9 @@ export default function AccordionDemo() {
           style="neutral"
           size="sm"
           iconName="Chevron-Down-Outline"
-          className="max-w-[500px]"
+          className="max-w-md"
           >
-            This variant has neutral style applied and is small in size with max width set to 500px passed as a custom class: (className="max-w-[500px]"). 
+            This variant has neutral style applied and is small in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
           <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal mb-4">Medium Accordion</p>
           <Accordion
@@ -42,9 +42,9 @@ export default function AccordionDemo() {
           style="primary"
           size="md"
           iconName="Chevron-Down-Outline"
-          className="max-w-[500px]"
+          className="max-w-md"
           >
-            This variant has primary style applied and is medium in size with max width set to 500px passed as a custom class: (className="max-w-[500px]"). 
+            This variant has primary style applied and is medium in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
           <p className="w-full h-min text-center text-body-md text-neutral-hovered font-normal mb-4">Large Accordion</p>
           <Accordion
@@ -52,9 +52,9 @@ export default function AccordionDemo() {
           style="transparent"
           size="lg"
           iconName="Chevron-Down-Outline"
-          className="max-w-[500px]"
+          className="max-w-md"
           >
-            This variant has primary style applied and is medium in size with max width set to 500px passed as a custom class: (className="max-w-[500px]"). 
+            This variant has primary style applied and is medium in size with max width set to medium breakpoint passed as a custom class: (className="max-w-md"). 
           </Accordion>
         </div>
         
