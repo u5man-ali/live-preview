@@ -22,8 +22,8 @@ export default {
           //neutral surfaces and backgrounds
           white: 'var(--neutral-white)',
           black: 'var(--neutral-black)',
-          bw: 'var(--neutral-bw)',
-          wb: 'var(--neutral-wb)',
+          blackAlt: 'var(--neutral-blackAlt)',
+          whiteAlt: 'var(--neutral-whiteAlt)',
           primary: 'var(--neutral-primary)',
           secondary: 'var(--neutral-secondary)',
           tertiary: 'var(--neutral-tertiary)',

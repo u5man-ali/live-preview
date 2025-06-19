@@ -7,8 +7,8 @@
   :root {
     --neutral-white: #ffffff; /*constant white, mostly used for on-brand text & icons*/
     --neutral-black: #000000; /*constant black*/
-    --neutral-bw: '#000000'; /*black that turns white in dark mode*/
-    --neutral-wb: '#ffffff'; /*white that turns black in dark mode*/
+    --neutral-blackAlt: '#000000'; /*black that turns white in dark mode*/
+    --neutral-whiteAlt: '#ffffff'; /*white that turns black in dark mode*/
     --neutral-primary: #ffffff; /*background color for active surfaces, cards, etc*/
     --neutral-secondary: theme('colors.stone.50'); /*background color for secondary surfaces, forms, input fills */
     --neutral-tertiary: theme('colors.stone.200'); /*background color for disabled, muted elements*/
@@ -134,8 +134,8 @@
   .dark {
     --neutral-white: #ffffff; /*constant white, mostly used for on-brand text & icons*/
     --neutral-black: #000000; /*constant black*/
-    --neutral-bw: '#ffffff'; /*black that turns white in dark mode*/
-    --neutral-wb: '#000000'; /*white that turns black in dark mode*/
+    --neutral-blackAlt: '#ffffff'; /*black that turns white in dark mode*/
+    --neutral-whiteAlt: '#000000'; /*white that turns black in dark mode*/
     --neutral-primary: theme('colors.stone.950'); /*background color for active surfaces, cards, etc*/
     --neutral-secondary: theme('colors.stone.800'); /*background color for secondary surfaces, forms, input fills */
     --neutral-tertiary: theme('colors.stone.700'); /*background color for disabled, muted elements*/

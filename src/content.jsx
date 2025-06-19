@@ -7,6 +7,8 @@ import AccordionPage from './pages/accordion-demo';
 import TabPage from './pages/tab-demo';
 import TablePage from './pages/table-demo';
 import InputPage from './pages/input-demo';
+import SwitchPage from './pages/switch-demo';
+import RadioPage from './pages/radio-demo';
 
 const componentMap = {
   introduction: Introduction,
@@ -17,6 +19,8 @@ const componentMap = {
   table: TablePage,
   badge: BadgePage,
   input: InputPage,
+  switch: SwitchPage,
+  radio: RadioPage,
   // Add other components here as needed
 };
 
