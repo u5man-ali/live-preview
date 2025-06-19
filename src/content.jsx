@@ -9,6 +9,7 @@ import TablePage from './pages/table-demo';
 import InputPage from './pages/input-demo';
 import SwitchPage from './pages/switch-demo';
 import RadioPage from './pages/radio-demo';
+import CheckboxPage from './pages/checkbox-demo';
 
 const componentMap = {
   introduction: Introduction,
@@ -21,6 +22,7 @@ const componentMap = {
   input: InputPage,
   switch: SwitchPage,
   radio: RadioPage,
+  checkbox: CheckboxPage,
   // Add other components here as needed
 };
 
