@@ -24,40 +24,47 @@ export default function Checkbox({
     }
   }, [indeterminate]);
 
+  const handleChange = (e) => {
+    if (disabled) return;
+    onChange?.(e.target.checked);
+  };
+
   return (
-    <div className={clsx("flex items-start gap-2", className)}>
+    <div className={clsx("flex items-center gap-4", className)}>
       <div className="flex items-center">
-        <div className="relative">
+        <label htmlFor={id} className="cursor-pointer">
+          <div
+            className={clsx(
+              "flex h-5 w-5 items-center justify-center rounded border-2 transition-colors",
+              disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
+              checked || indeterminate
+                ? "bg-brand-primary-rest border-brand-primary-rest text-neutral-inverse"
+                : "bg-white border-neutral-regular"
+            )}
+          >
+            {indeterminate ? (
+              <MinusIcon className="h-4 w-4 text-white" />
+            ) : checked ? (
+              <CheckmarkIcon className="h-4 w-4 text-white" />
+            ) : null}
+          </div>
           <input
             ref={ref}
-            type="checkbox"
             id={id}
             name={name}
+            type="checkbox"
             checked={checked}
+            onChange={handleChange}
             disabled={disabled}
-            onChange={(e) => onChange?.(e.target.checked)}
-            className={clsx(
-              "peer h-6 w-6 shrink-0 appearance-none cursor-pointer rounded border-2 transition-colors",
-              indeterminate || checked
-                ? "bg-brand-primary-rest border-brand-primary-rest"
-                : "bg-white border-neutral-regular",
-              disabled && "opacity-50 cursor-not-allowed"
-            )}
+            className="sr-only"
           />
-          {/* Icon overlays */}
-          {indeterminate && (
-            <MinusIcon className="pointer-events-none text-neutral-inverse absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2" />
-          )}
-          {checked && !indeterminate && (
-            <CheckmarkIcon className="pointer-events-none text-neutral-inverse absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2" />
-          )}
-        </div>
+        </label>
       </div>
 
       <label htmlFor={id} className="cursor-pointer select-none">
-        <span className="block text-sm font-medium text-neutral-strong">{label}</span>
+        <span className="block text-md font-medium text-neutral-strong">{label}</span>
         {description && (
-          <span className="block text-xs text-neutral-muted">{description}</span>
+          <span className="block text-sm text-neutral-muted">{description}</span>
         )}
       </label>
     </div>
