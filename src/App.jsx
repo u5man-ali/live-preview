@@ -50,7 +50,7 @@ function App() {
           style="primary"
           shape="pill"
           iconSize="sm"
-          iconLeft={theme == 'dark' ? sun: moon}
+          iconLeft={theme === 'dark' ? sun: moon}
           onClick={toggleTheme}
         >
           {theme === 'dark' ? 'Go Bright': 'Go Dark'}

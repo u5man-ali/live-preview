@@ -51,7 +51,7 @@ export default function Switch({
           )}
         />
       </button>
-      <span className="text-sm text-neutral-mute">{isOn ? "On" : "Off"}</span>
+      <span className="text-sm text-neutral-mute">{isOn ? "" : ""}</span>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Radio from "../components/radio";
 import {useState} from "react";
 
 export default function RadioDemo() {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("credit");
   return (
     <div className="p-4 space-y-4">
       <Radio
@@ -33,7 +33,7 @@ export default function RadioDemo() {
         checked={selected === "cod"}
         onChange={setSelected}
         description="Pay in cash when your order arrives."
-        disabled
+        
       />
     </div>
   );

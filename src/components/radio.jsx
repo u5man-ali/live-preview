@@ -32,7 +32,7 @@ export default function RadioButton({
       <label htmlFor={id} className="cursor-pointer select-none">
         <span className="block text-sm font-medium text-neutral-strong">{label}</span>
         {description && (
-          <span className="block text-xs text-neutral-muted">{description}</span>
+          <span className="block text-xs text-neutral-mute">{description}</span>
         )}
       </label>
     </div>
