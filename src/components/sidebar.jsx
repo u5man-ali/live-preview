@@ -18,8 +18,10 @@ const sections = [
       { id: "button", label: "Button", },
       { id: "badge", label: "Badge", },
       { id: "fab", label: "FAB", },
+      { id: "switch" , label: "Toggle Switches"},
+      { id: "radio" , label: "Radio Buttons"},
+      { id: "checkbox" , label: "Checkboxes"},
       { id: "tab", label: "Tabs", },
-      { id: "accordion", label: "Accrodion", },
       { id: "input", label: "Form Inputs", },
     ]
   },
@@ -27,7 +29,7 @@ const sections = [
     id: "building-blocks",
     label: "Building Blocks",
     children: [
-      
+      { id: "accordion", label: "Accrodion", },      
       { id: "table", label: "Table", },
       { id: "dropdown", label: "Dropdown", },
       { id: "breadcrumb", label: "Breadcrumb", }

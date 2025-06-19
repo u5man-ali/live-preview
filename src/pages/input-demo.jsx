@@ -16,7 +16,7 @@ export default function InputDemo() {
                 id="search"
                 label="Search"
                 size="md"
-                shape="pill"
+                shape="rounded"
                 iconLeft={SearchIcon}
                 placeholder="Search something..."
                 hint="Type at least 3 characters."
@@ -24,7 +24,7 @@ export default function InputDemo() {
                 <Input
                 id="feedback"
                 label="Feedback"
-                size="lg"
+                size="sm"
                 shape="rounded"
                 multiline
                 rows={4}
