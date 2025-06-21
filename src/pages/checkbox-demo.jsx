@@ -5,20 +5,21 @@ export default function CheckboxDemo() {
   const [allChecked, setAllChecked] = useState(false);
   const [indeterminate, setIndeterminate] = useState(false);
   const [read, setRead] = useState(false);
+  const [copy, setCopy] = useState(false);
   const [write, setWrite] = useState(false);
 
   useEffect(() => {
-    if (read && write) {
+    if (read && copy && write) {
       setAllChecked(true);
       setIndeterminate(false);
-    } else if (read || write) {
+    } else if (read || copy || write) {
       setAllChecked(false);
       setIndeterminate(true);
     } else {
       setAllChecked(false);
       setIndeterminate(false);
     }
-  }, [read, write]);
+  }, [read, copy, write]);
 
   return (
     <div className="space-y-4 p-4">
@@ -30,11 +31,13 @@ export default function CheckboxDemo() {
         indeterminate={indeterminate}
         onChange={(value) => {
           setRead(value);
+          setCopy(value);
           setWrite(value);
           setIndeterminate(value);
         }}
         description="Controls all individual permissions below"
       />
+      <div className="space-y-2 pl-4">
       <Checkbox
         id="read"
         name="permissions"
@@ -43,12 +46,20 @@ export default function CheckboxDemo() {
         onChange={setRead}
       />
       <Checkbox
+        id="copy"
+        name="permissions"
+        label="Copy Access"
+        checked={copy}
+        onChange={setCopy}
+      />
+      <Checkbox
         id="write"
         name="permissions"
         label="Write Access"
         checked={write}
         onChange={setWrite}
       />
+      </div>
     </div>
   );
 }
