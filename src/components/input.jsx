@@ -86,7 +86,7 @@ export default function Input({
           {error}
         </p>
       ) : hint ? (
-        <p id={hintOrErrorId} className="text-neutral-muted text-sm">
+        <p id={hintOrErrorId} className="text-neutral-placeholder text-sm">
           {hint}
         </p>
       ) : null}

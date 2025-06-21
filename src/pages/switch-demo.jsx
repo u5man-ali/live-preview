@@ -19,7 +19,7 @@ export default function SwitchDemo() {
       <Switch
         id="notif"
         name="notifications"
-        label={theme === 'dark'? 'Go Bright': 'Go Dark'}
+        label={theme === 'dark'? 'Switch to Light Mode': 'Switch to Dark Mode'}
         checked={true}
         //onChange={(value) => console.log("Switch is now:", value ? "" : "")}
         onChange={(toggleTheme)}

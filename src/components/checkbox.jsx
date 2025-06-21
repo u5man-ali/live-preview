@@ -39,13 +39,13 @@ export default function Checkbox({
               disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
               checked || indeterminate
                 ? "bg-brand-primary-rest border-brand-primary-rest text-neutral-inverse"
-                : "bg-white border-neutral-regular"
+                : "bg-neutral-secondary border-neutral-regular"
             )}
           >
             {indeterminate ? (
-              <MinusIcon className="h-4 w-4 text-white" />
+              <MinusIcon className="h-4 w-4 text-neutral-white" />
             ) : checked ? (
-              <CheckmarkIcon className="h-4 w-4 text-white" />
+              <CheckmarkIcon className="h-4 w-4 text-neutral-white" />
             ) : null}
           </div>
           <input
@@ -64,7 +64,7 @@ export default function Checkbox({
       <label htmlFor={id} className="cursor-pointer select-none">
         <span className="block text-md font-medium text-neutral-strong">{label}</span>
         {description && (
-          <span className="block text-sm text-neutral-muted">{description}</span>
+          <span className="block text-sm text-neutral-placeholder">{description}</span>
         )}
       </label>
     </div>
