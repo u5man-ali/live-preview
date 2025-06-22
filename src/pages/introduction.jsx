@@ -5,7 +5,7 @@ export default function Introduction() {
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         <div className="w-full flex justify-start items-center gap-4 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2">DezineCrafts: Ultimate UI Kit</h1>
-        <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Welcome to the DezineCrafts UI Documentation<br></br></h3>
+        <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold">Welcome to the DezineCrafts UI<br></br></h3>
         <p className="text-neutral-hovered mb-4">DezineCrafts is designed to empower developers and designers with a professional-grade collection of pre-built, customizable UI components built entirely with Tailwind CSS. Our goal is to help you ship beautiful, responsive, and consistent interfaces faster—without sacrificing flexibility, accessibility, or design quality.</p>
         <h3 className="w-full h-min text-body-lg text-neutral-default font-semibold ">What's Inside This Documentation</h3>
         <p className="text-neutral-hovered ">Here’s everything you’ll find in the DezineCrafts UI Kit:</p>
