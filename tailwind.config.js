@@ -170,6 +170,13 @@ export default {
         disp: ['Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       },
+      fontWeight: {
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+      },
       spacing: {
         'null': '0px',
         'uno': '0.0625rem', // 1px

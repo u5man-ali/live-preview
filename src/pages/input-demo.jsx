@@ -34,7 +34,7 @@ export default function InputDemo() {
                 <Input
                 id="email"
                 label="Email"
-                size="md"
+                size="lg"
                 shape="rounded"
                 iconRight={WarningIcon}
                 placeholder="example@email.com"
