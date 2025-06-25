@@ -29,11 +29,11 @@
     --secondary-bg: theme('colors.purple.50'); /*brand secondary background*/
     --secondary-light: theme('colors.purple.100'); /*subtle shade of brand secondary*/
 
-    --tertiary-rest: theme('colors.yellow.700'); /*component fill for the rest state mostly buttons*/
-    --tertiary-hover: theme('colors.yellow.600'); /*component fill for the hover state mostly buttons*/
-    --tertiary-focus: theme('colors.yellow.800'); /*component fill for the focus state mostly buttons*/
-    --tertiary-bg: theme('colors.yellow.50'); /*brand tertiary background*/
-    --tertiary-light: theme('colors.yellow.100'); /*subtle shade of brand tertiary*/
+    --tertiary-rest: theme('colors.slate.700'); /*component fill for the rest state mostly buttons*/
+    --tertiary-hover: theme('colors.slate.600'); /*component fill for the hover state mostly buttons*/
+    --tertiary-focus: theme('colors.slate.800'); /*component fill for the focus state mostly buttons*/
+    --tertiary-bg: theme('colors.slate.50'); /*brand tertiary background*/
+    --tertiary-light: theme('colors.slate.100'); /*subtle shade of brand tertiary*/
 
     --success-rest: theme('colors.emerald.700'); /*component fill for the rest state mostly buttons*/
     --success-hover: theme('colors.emerald.600'); /*component fill for the hover state mostly buttons*/
@@ -76,9 +76,9 @@
     --text-secondary-hover: theme('colors.purple.600'); /*component fill for the hover state mostly buttons*/
     --text-secondary-focus: theme('colors.purple.800'); /*component fill for the focus state mostly buttons*/
 
-    --text-tertiary-rest: theme('colors.yellow.700'); /*component fill for the rest state mostly buttons*/
-    --text-tertiary-hover: theme('colors.yellow.600'); /*component fill for the hover state mostly buttons*/
-    --text-tertiary-focus: theme('colors.yellow.800'); /*component fill for the focus state mostly buttons*/
+    --text-tertiary-rest: theme('colors.slate.700'); /*component fill for the rest state mostly buttons*/
+    --text-tertiary-hover: theme('colors.slate.600'); /*component fill for the hover state mostly buttons*/
+    --text-tertiary-focus: theme('colors.slate.800'); /*component fill for the focus state mostly buttons*/
     
     --text-success-rest: theme('colors.emerald.700'); /*component fill for the rest state mostly buttons*/
     --text-success-hover: theme('colors.emerald.600'); /*component fill for the hover state mostly buttons*/
@@ -109,9 +109,9 @@
     --border-secondary-subtle: theme('colors.purple.100'); /*subtle border*/
     --border-secondary-strong: theme('colors.purple.800'); /*strong border */
 
-    --border-tertiary-regular: theme('colors.yellow.400'); /*regular border*/
-    --border-tertiaary-subtle: theme('colors.yellow.100'); /*subtle border*/
-    --border-tertiary-strong: theme('colors.yellow.800'); /*strong border */
+    --border-tertiary-regular: theme('colors.slate.400'); /*regular border*/
+    --border-tertiaary-subtle: theme('colors.slate.100'); /*subtle border*/
+    --border-tertiary-strong: theme('colors.slate.800'); /*strong border */
 
     --border-success-regular: theme('colors.emerald.400'); /*regular border*/
     --border-success-subtle: theme('colors.emerald.100'); /*subtle border*/
@@ -154,11 +154,11 @@
     --secondary-bg: theme('colors.purple.950'); /*brand secondary background*/
     --secondary-light: theme('colors.purple.900'); /*subtle shade of brand secondary*/
 
-    --tertiary-rest: theme('colors.yellow.700'); /*component fill for the rest state mostly buttons*/
-    --tertiary-hover: theme('colors.yellow.600'); /*component fill for the hover state mostly buttons*/
-    --tertiary-focus: theme('colors.yellow.800'); /*component fill for the focus state mostly buttons*/
-    --tertiary-bg: theme('colors.yellow.950'); /*brand tertiary background*/
-    --tertiary-light: theme('colors.yellow.900'); /*subtle shade of brand tertiary*/
+    --tertiary-rest: theme('colors.slate.700'); /*component fill for the rest state mostly buttons*/
+    --tertiary-hover: theme('colors.slate.600'); /*component fill for the hover state mostly buttons*/
+    --tertiary-focus: theme('colors.slate.800'); /*component fill for the focus state mostly buttons*/
+    --tertiary-bg: theme('colors.slate.950'); /*brand tertiary background*/
+    --tertiary-light: theme('colors.slate.900'); /*subtle shade of brand tertiary*/
 
     --success-rest: theme('colors.emerald.700'); /*component fill for the rest state mostly buttons*/
     --success-hover: theme('colors.emerald.600'); /*component fill for the hover state mostly buttons*/
@@ -201,9 +201,9 @@
     --text-secondary-hover: theme('colors.purple.200'); /*component fill for the hover state mostly buttons*/
     --text-secondary-focus: theme('colors.purple.100'); /*component fill for the focus state mostly buttons*/
 
-    --text-tertiary-rest: theme('colors.yellow.300'); /*component fill for the rest state mostly buttons*/
-    --text-tertiary-hover: theme('colors.yellow.200'); /*component fill for the hover state mostly buttons*/
-    --text-tertiary-focus: theme('colors.yellow.100'); /*component fill for the focus state mostly buttons*/
+    --text-tertiary-rest: theme('colors.slate.300'); /*component fill for the rest state mostly buttons*/
+    --text-tertiary-hover: theme('colors.slate.200'); /*component fill for the hover state mostly buttons*/
+    --text-tertiary-focus: theme('colors.slate.100'); /*component fill for the focus state mostly buttons*/
     
     --text-success-rest: theme('colors.emerald.300'); /*component fill for the rest state mostly buttons*/
     --text-success-hover: theme('colors.emerald.200'); /*component fill for the hover state mostly buttons*/
@@ -234,9 +234,9 @@
     --border-secondary-subtle: theme('colors.purple.800'); /*subtle border*/
     --border-secondary-strong: theme('colors.purple.200'); /*strong border */
 
-    --border-tertiary-regular: theme('colors.yellow.600'); /*regular border*/
-    --border-tertiaary-subtle: theme('colors.yellow.800'); /*subtle border*/
-    --border-tertiary-strong: theme('colors.yellow.200'); /*strong border */
+    --border-tertiary-regular: theme('colors.slate.600'); /*regular border*/
+    --border-tertiaary-subtle: theme('colors.slate.800'); /*subtle border*/
+    --border-tertiary-strong: theme('colors.slate.200'); /*strong border */
 
     --border-success-regular: theme('colors.emerald.600'); /*regular border*/
     --border-success-subtle: theme('colors.emerald.800'); /*subtle border*/
