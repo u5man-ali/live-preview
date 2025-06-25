@@ -48,7 +48,7 @@ export default function Table({
               <th
                 key={index}
                 className={clsx(
-                  "font-disp font-medium",
+                  "font-heading font-medium",
                   sizes[size]?.cell,
                   styles[style]?.head,
                 )}

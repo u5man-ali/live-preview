@@ -3,7 +3,7 @@ import Accordion from '../components/accordion'
 export default function AccordionDemo() {
   return (
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-      <div className="w-full h-min flex justify-center items-center gap-2 mb-4 flex-wrap">
+      <div className="w-full h-min flex justify-center items-center gap-2 mb-4 flex-wrap font-body">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">DC Accordion Component</h1>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DC Accordion is a flexible, responsive UI component built with Tailwind CSS, designed to show and hide content efficiently within limited screen real estate. Commonly used in FAQ sections, content-heavy dashboards, filter panels, and forms, accordions improve UX by reducing clutter and giving users control over what to read or interact with.</p>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">With support for multiple styles, size variations, and an intuitive expand/collapse behavior, the DC Accordion delivers clarity, consistency, and a polished experience across all screen sizes.<br></br>

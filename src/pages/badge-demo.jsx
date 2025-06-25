@@ -10,7 +10,7 @@ import Upload from '../icons/Cloud-Arrow-Up-Outline.svg?react'
 
 export default function BadgeDemo() {
   return (
-    <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
+    <div className="flex justify-center items-center gap-4 mb-4 flex-wrap font-body">
         <div className="w-full flex justify-center items-start gap-2 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">DC Badge Component</h1>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DC Badge is a flexible, fully responsive UI element built with Tailwind CSS, crafted for modern interfaces that require clarity, categorization, and visual hierarchy. Whether you're displaying status indicators, categorizing content, tagging elements, or labeling rows in a table, this component delivers a consistent and lightweight visual aid across screen sizes and use cases. With support for various styles, shapes, sizes, and icon placements, the badge integrates smoothly into any design system or interface.</p>

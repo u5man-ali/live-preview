@@ -21,7 +21,7 @@ export default function TabDemo() {
     const [section2Tab, setSection2Tab] = useState(section1[0].id);
     const [section3Tab, setSection3Tab] = useState(section1[0].id);
   return (
-    <div className="flex justify-center items-center mb-4 flex-wrap text-neutral-hovered">
+    <div className="flex justify-center items-center mb-4 flex-wrap text-neutral-hovered font-body">
         <div className="w-full flex justify-center items-center gap-2 flex-wrap">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">Tabs Component</h1>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DezineCrafts Tabs component is a horizontally stacked, lightweight navigation UI designed for segmenting and switching between different content views—all without reloading the page. Built with Tailwind CSS utility classes and React state logic, it delivers an accessible, flexible tab-switching experience while remaining highly customizable for product, dashboard, or documentation use cases.</p>

@@ -8,7 +8,7 @@ import google from '../icons/google.svg?react'
 
 export default function ButtonDemo() {
   return (
-    <div className="flex justify-center items-center gap-4 mb-4 flex-wrap ">
+    <div className="flex justify-center items-center gap-4 mb-4 flex-wrap font-body">
         <div className="w-full flex justify-center items-center gap-2 mb-4 flex-wrap">
         <h1 className="w-full h-min text-body-xxl text-neutral-default font-bold border-b border-neutral-regular py-2 mb-4">DC Button Component</h1>
         <p className="w-full h-min text-body-md text-neutral-hovered font-normal">The DC Button is a versatile, fully responsive UI element crafted with Tailwind CSS, ideal for building modern interfaces that demand clarity and performance. Whether you're designing a compelling call-to-action, form submission flow, or navigation control, this component delivers flexibility, consistency, and polish across devices and use cases.
